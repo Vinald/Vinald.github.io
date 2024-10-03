@@ -59,6 +59,11 @@ section {
     color: #007bff;
 }
 
+.timeline-item p {
+    margin-top: 10px;
+    color: white;
+}
+
 .timeline-item:before {
     content: "";
     position: absolute;
