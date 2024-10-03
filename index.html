@@ -28,10 +28,12 @@
                     <a href="mailto:okiror1vinald@gmail.com">okiror1vinald@gmail.com</a> LinkedIn:
                     <a
                         href="https://www.linkedin.com/in/okiror-samuel-vinald-91a978254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        rel="noopener"
                         target="_blank"
                         >Okiror Samuel Vinald</a
                     >
-                    GitHub: <a href="https://github.com/vinald" target="_blank">Vinald</a>
+                    GitHub:
+                    <a href="https://github.com/vinald" rel="noopener" target="_blank">Vinald</a>
                 </p>
                 <p>Contact: +256 757 684 309 | +256 778 521 571</p>
                 <a href="assets/resume.pdf" class="btn btn-primary">Download Resume</a>
@@ -88,7 +90,7 @@
                         />
                     </div>
                     <div class="col-md-8">
-                        <p class="lead text-justify">
+                        <p class="lead text-justify text-light">
                             Enthusiastic and driven Computer Engineer with proficiency in Python and
                             JavaScript, alongside a strong background in web development and data
                             science. Experienced in designing and deploying innovative software
@@ -103,7 +105,7 @@
             </section>
 
             <!-- Experience Section -->
-            <section id="experience" class="mb-4">
+            <section id="experience" class="mb-4 text-light bg-dark">
                 <h2 class="text-center mb-4 text-uppercase">Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -206,7 +208,7 @@
             </section>
 
             <!-- Education Section -->
-            <section id="experience" class="mb-5">
+            <section id="experience" class="mb-5 text-light">
                 <h2 class="text-center mb-4 text-uppercase">Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -230,7 +232,7 @@
             </section>
 
             <!-- Skills Section -->
-            <section id="skills" class="mb-5">
+            <section id="skills" class="mb-5 bg-dark">
                 <h2 class="text-center mb-4 text-uppercase">Skills</h2>
                 <div class="row">
                     <div class="col-md-4">
@@ -303,43 +305,85 @@
             <!-- Projects Section -->
             <section id="projects" class="mb-5">
                 <h2 class="text-center mb-4 text-uppercase">Projects</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4>Lender Count Prediction System</h4>
-                        <p>
-                            Built a machine learning model predicting the number of potential
-                            lenders based on loan amount and repayment term.
-                        </p>
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img
+                            src="assets/images/irrigation.jpg"
+                            alt="Prototype"
+                            class="img-fluid rounded-5 mb-3"
+                        />
                     </div>
-                    <div class="col-md-6">
-                        <h4>Luganda Voice-Controlled System</h4>
-                        <p>
-                            Developed using Python, TensorFlow, and embedded systems for hands-free
-                            operation for disabled users.
-                        </p>
-                    </div>
-                    <div class="col-md-6">
-                        <h4>Smart Irrigation System</h4>
-                        <p>
+                    <div class="col-md-8">
+                        <h3 class="text-light">Smart Irrigation System</h3>
+                        <p class="lead text-justify text-light">
                             Developed a smart system integrating machine learning to optimize water
                             usage based on real-time sensor data, reducing water consumption by 30%.
                         </p>
+                        <a href="projects/irrigation-project.html">
+                            <button class="btn btn-info mb-4">Read More</button>
+                        </a>
                     </div>
-                    <div class="col-md-6">
-                        <h4>Blog Website</h4>
-                        <p>
-                            Created a dynamic blog platform with features for adding, editing, and
-                            deleting posts. Designed a responsive and user-friendly interface using
-                            Node.js, HTML, and Bootstrap.
-                        </p>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img
+                            src="assets/images/wheelchair.jpg"
+                            alt="Prototype"
+                            class="img-fluid rounded-5 mb-3"
+                        />
                     </div>
-                    <div class="col-md-6">
-                        <h4>Voice-Controlled Wheelchair</h4>
-                        <p>
+                    <div class="col-md-8">
+                        <h3 class="text-light">Luganda Voice-Controlled System</h3>
+                        <p class="lead text-justify text-light">
                             Engineered a voice-activated wheelchair system using speech recognition,
                             enabling hands-free control for users with physical impairments,
                             significantly improving accessibility.
                         </p>
+                        <a href="projects/wheelchair-project.html">
+                            <button class="btn btn-info mb-4">Read More</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img
+                            src="assets/images/blog.jpg"
+                            alt="blog website"
+                            class="img-fluid rounded-5 mb-3"
+                        />
+                    </div>
+                    <div class="col-md-8">
+                        <h3 class="text-light">Blog Website</h3>
+                        <p class="lead text-justify text-light">
+                            Created a dynamic blog platform with features for adding, editing, and
+                            deleting posts. Designed a responsive and user-friendly interface using
+                            Node.js, HTML, and Bootstrap.
+                        </p>
+                        <a href="projects/blog-project.html">
+                            <button class="btn btn-info mb-4">Read More</button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img
+                            src="assets/images/lender.png"
+                            alt="prediction screen"
+                            class="img-fluid rounded-5 mb-3"
+                        />
+                    </div>
+                    <div class="col-md-8">
+                        <h3 class="text-light">Lender Count Prediction System</h3>
+                        <p class="lead text-justify text-light">
+                            Built a machine learning model predicting the number of potential
+                            lenders based on loan amount and repayment term.
+                        </p>
+                        <a href="projects/lender-project.html">
+                            <button class="btn btn-info mb-4">Read More</button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -347,7 +391,7 @@
 
         <!-- Footer -->
         <footer class="bg-dark text-light text-center py-2">
-            <p>&copy; 2024 OKIROR SAMUEL VINALD</p>
+            <p>&copy; 2024 Okiror Samuel Vinald</p>
         </footer>
 
         <!-- Bootstrap JS -->
