@@ -85,3 +85,7 @@ footer {
 .text-justify {
     text-align: justify;
 }
+
+.project-img {
+    width: 500px;
+}
