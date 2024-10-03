@@ -1,8 +1,50 @@
+/* General styles */
 body {
+    background-color: #212529;
     background: rgb(15, 23, 42);
+    color: white;
 }
 
-footer {
-    color: #fff;
-    padding: 10px 0;
+h1,
+h4 {
+    color: #f8f9fa;
 }
+
+/* Navigation */
+.nav-link {
+    color: #adb5bd;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding-top: 50px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Footer */
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    opacity: 0.6;
+}
+
