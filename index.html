@@ -18,278 +18,337 @@
         <link rel="stylesheet" href="assets/styles.css" />
     </head>
     <body>
-        <div class="container mt-5 p-5">
-            <div class="row justify-content-center align-items-start text-light">
-                <!-- Left Navigation -->
-                <div  class="col-md-3 text-center text-md-start">
-                    <div class="vh-50">
-                        <h1 class="display-4">OKIROR SAMUEL VINALD</h1>
-                        <h4>Computer Engineer</h4>
-                        <hr />
-                        <!-- Vertical nav bar -->
-                        <nav class="nav flex-column sticky-top">
-                            <a class="nav-link active" href="#intro">ABOUT</a>
+        <!-- Header Section -->
+        <header class="bg-dark text-light py-4">
+            <div class="container text-center">
+                <h1 class="display-4 text-light">OKIROR SAMUEL VINALD</h1>
+                <h4 class="text-light">Computer Engineer | Web Development | Data Science</h4>
+                <p>
+                    Email:
+                    <a href="mailto:okiror1vinald@gmail.com">okiror1vinald@gmail.com</a> LinkedIn:
+                    <a
+                        href="https://www.linkedin.com/in/okiror-samuel-vinald-91a978254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank"
+                        >Okiror Samuel Vinald</a
+                    >
+                    GitHub: <a href="https://github.com/vinald" target="_blank">Vinald</a>
+                </p>
+                <p>Contact: +256 757 684 309 | +256 778 521 571</p>
+                <a href="assets/resume.pdf" class="btn btn-primary">Download Resume</a>
+            </div>
+        </header>
+
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Vinald Portfolio</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intro">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#experience">EXPERIENCE</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#education">EDUCATION</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#skills">SKILLS</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#projects">PROJECTS</a>
-                            <a class="nav-link" href="#contact">CONTACT</a>
-                        </nav>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="container my-4">
+            <!-- Intro Section -->
+            <section id="intro" class="mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-4 text-center">
+                        <img
+                            src="assets/images/profile.jpg"
+                            alt="Vinald"
+                            class="img-fluid rounded-5 mb-3"
+                        />
+                    </div>
+                    <div class="col-md-8">
+                        <p class="lead text-justify">
+                            Enthusiastic and driven Computer Engineer with proficiency in Python and
+                            JavaScript, alongside a strong background in web development and data
+                            science. Experienced in designing and deploying innovative software
+                            solutions through hands-on internships and academic projects. Adept at
+                            problem-solving, collaborating within team environments, and adapting
+                            quickly to new technologies. Committed to continuous learning and
+                            professional growth, with a keen interest in contributing to dynamic
+                            software development teams.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="mb-4">
+                <h2 class="text-center mb-4 text-uppercase">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="date">August 2024 - Present</span>
+                        <h4>Data Science and Web Intern, Zidio Development</h4>
+                        <p><strong>Skills:</strong> Python, JavaScript, Node.js, Excel, SQL</p>
+                        <p>
+                            <strong>Responsibilities:</strong>
+                        </p>
+
+                        <ul>
+                            <li>
+                                Analyzed project data and created summaries to support
+                                decision-making.
+                            </li>
+                            <li>Cleaned and transformed data, ensuring high-quality datasets.</li>
+                            <li>
+                                Used Excel functions to enhance performance monitoring and reporting
+                                accuracy.
+                            </li>
+                            <li>
+                                Developed backend services with JavaScript (Node.js), optimizing
+                                server performance and scalability.
+                            </li>
+                            <li>
+                                Designed RESTful APIs and ensured secure integration of databases
+                                for improved functionality.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">June 2023 - September 2023</span>
+                        <h4>Intern, NetLabsUG</h4>
+                        <p>
+                            <strong>Skills: </strong> Python, Networking, Machine Learning, Embedded
+                            Systems
+                        </p>
+                        <p>
+                            <strong>Responsibilities:</strong>
+                        </p>
+
+                        <ul>
+                            <li>
+                                Built a smart irrigation system using Python and TensorFlow,
+                                increasing crop yield.
+                            </li>
+                            <li>
+                                Developed a machine learning model to analyze real-time sensor data
+                                and optimize irrigation patterns, resulting in a 30\% reduction in
+                                water usage and more efficient resource consumption.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">June 2022 - September 2022</span>
+                        <h4>Software Intern, EvoTech Solutions (Pivadel)</h4>
+                        <p><strong>Skills: </strong> HTML, CSS, JavaScript, React, SEO</p>
+                        <p>
+                            <strong>Responsibilities:</strong>
+                        </p>
+
+                        <ul>
+                            <li>
+                                Developed user interface components for a school management system
+                                using React.
+                            </li>
+                            <li>
+                                Implemented interactive features, enhancing user experience and
+                                functionality.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">October 2021 - May 2023</span>
+                        <h4>Graphic Designer, BireMedia</h4>
+                        <p><strong>Skills:</strong> Illustrator, PhotoShop</p>
+                        <p>
+                            <strong>Responsibilities:</strong>
+                        </p>
+
+                        <ul>
+                            <li>
+                                Designed marketing materials, including brochures, banners, and
+                                social media graphics.
+                            </li>
+                            <li>
+                                Collaborated with clients to understand their design needs and
+                                deliver high-quality results.
+                            </li>
+                            <li>
+                                Managed multiple projects simultaneously, meeting tight deadlines
+                                and exceeding client expectations.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="experience" class="mb-5">
+                <h2 class="text-center mb-4 text-uppercase">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="date">2021 - 2024</span>
+                        <h4>Bachelor of Science in Computer Engineering</h4>
+                        <p>Makerere University, Kampala-Uganda</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">2018 - 2019</span>
+                        <h4>Uganda Advanced Certificate of Education</h4>
+                        <p>St. Peter's College, Tororo</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">2014 - 2017</span>
+                        <h4>Uganda Certificate of Education</h4>
+                        <p>St. Peter's College, Tororo</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mb-5">
+                <h2 class="text-center mb-4 text-uppercase">Skills</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4>Programming Languages</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Web Development</h4>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>APIs</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Data Science</h4>
+                        <ul>
+                            <li>Data Analysis</li>
+                            <li>Data Visualization</li>
+                            <li>Machine Learning</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>Linux</li>
+                            <li>Jupyter</li>
+                            <li>Excel</li>
+                            <li>Power BI</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Design</h4>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Adobe Photoshop</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Main Content -->
-                <div class="col-md-9 text-start">
-                    <!-- Intro Section -->
-                    <section id="intro" class="my-5 mx-2">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img
-                                    src="assets/images/profile.jpg"
-                                    alt="Vinald"
-                                    class="img-fluid rounded-circle"
-                                />
-                            </div>
-                            <div class="col-md-8">
-                                <p class="lead text-justify">
-                                    Enthusiastic and driven Computer Engineering graduate with
-                                    proficiency in Python and JavaScript, alongside a strong
-                                    background in web development and machine learning. Experienced
-                                    in designing and deploying innovative software solutions through
-                                    hands-on internships and academic projects. Eager to leverage my
-                                    technical skills and problem-solving abilities to contribute to
-                                    dynamic software development projects in a challenging
-                                    environment.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Experience Section -->
-                    <section id="experience" class="text-justify">
-                        <h1>Experience</h1>
-                        <div class="row mb-2">
-                            <div class="col-3">Jun - Sept 2023</div>
-                            <div class="col-8 lead">Intern, NetLabsUG!</div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-3"></div>
-                            <div class="col-8">
-                                Designed and implemented a smart monitoring and management
-                                irrigation system using Python and TensorFlow that increased crop
-                                yield. Built a machine learning model to optimize irrigation
-                                patterns based on real-time sensor data. Gained experience with
-                                embedded systems, Networking, Python, and Machine Learning.
-                                <br /><button class="btn btn-info btn-sm">More</button>
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <div class="col-3">Jun - Sept 2023</div>
-                            <div class="col-8 lead">
-                                Intern, EvoTech Solutions Limited (Pivadel)
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-3"></div>
-                            <div class="col-8">
-                                Developed user interface components for a school management system
-                                using React. Improved user experience and functionality of the
-                                system by implementing interactive features. Strengthened skills in
-                                HTML, CSS, and JavaScript.
-                                <br /><button class="btn btn-info btn-sm">More</button>
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <div class="col-3">Jun - Sept 2023</div>
-                            <div class="col-8 lead">Graphic Designer, BireMedia</div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-3"></div>
-                            <div class="col-8">
-                                Developed user interface components for a school management system
-                                using React.
-                                <br /><button class="btn btn-info btn-sm">More</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Education Section -->
-                    <section id="education">
-                        <h1>Education</h1>
-                        <div class="row mb-2">
-                            <div class="col-3">2021 — 2024</div>
-                            <div class="col-8 lead">
-                                Bachelor of Science in Computer Engineering
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-3"></div>
-                            <div class="col-8">Makerere University, Kampala</div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <div class="col-3">2018 — 2019</div>
-                            <div class="col-8 lead">Uganda Advanced Certificate of Education</div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-3"></div>
-                            <div class="col-8">St Peter's College, Tororo</div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <div class="col-3">2014 — 2017</div>
-                            <div class="col-8 lead">Uganda Certificate of Education</div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-3"></div>
-                            <div class="col-8">St Peter's College, Tororo</div>
-                        </div>
-                    </section>
-
-                    <!-- Skills Section -->
-                    <section id="skills" class="py-5">
-                        <h1>Technical Skills</h1>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h4>Programming Languages</h4>
-                                <ul>
-                                    <li>Python</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Web Development</h4>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>Bootstrap</li>
-                                    <li>React</li>
-                                    <li>Django</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Data Science</h4>
-                                <ul>
-                                    <li>Machine Learning</li>
-                                    <li>Data Analysis</li>
-                                    <li>TensorFlow</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <h4>Database Management</h4>
-                                <ul>
-                                    <li>SQL</li>
-                                    <li>PostgreSQL</li>
-                                    <li>SQLite</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Tools</h4>
-                                <ul>
-                                    <li>Git</li>
-                                    <li>GitHub</li>
-                                    <li>VS Code</li>
-                                    <li>Jupyter Notebook</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Others</h4>
-                                <ul>
-                                    <li>Embedded Systems</li>
-                                    <li>Networking</li>
-                                    <li>Linux</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <h1>Soft Skills</h1>
-                        <div class="row text-justify">
-                            <div class="col-md-4 ">
-                                <h4>Communication</h4>
-                                <p>
-                                    Excellent verbal and written communication skills, with the
-                                    ability to effectively communicate with technical and
-                                    non-technical stakeholders.
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Problem-Solving</h4>
-                                <p>
-                                    Strong analytical and problem-solving skills, with the ability
-                                    to identify issues and implement effective solutions.
-                                </p>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>Teamwork</h4>
-                                <p>
-                                    Proven ability to work effectively in a team environment,
-                                    collaborating with colleagues to achieve shared goals.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Projects Section -->
-                    <section id="projects" class="py-5 text-justify">
-                        <h1>Projects</h1>
-                        <div>
-                            <h4>Lender Count Prediction System</h4>
-                            <p>
-                                Built a machine learning model predicting the number of potential
-                                lenders based on loan amount and repayment term. Empowers borrowers
-                                to choose loan options attracting more lenders for potentially
-                                better rates.
-                            </p>
-                        </div>
-                        <div>
-                            <h4>Luganda Voice-Controlled System</h4>
-                            <p>
-                                Developed using Python, TensorFlow, Librosa, and embedded systems;
-                                enabled hands-free operation for disabled users, significantly
-                                improving accessibility.
-                            </p>
-                        </div>
-                        <div>
-                            <h4>Smart Irrigation System</h4>
-                            <p>
-                                Implemented with Python, TensorFlow, C++, Flask, and embedded
-                                systems; streamlined for remote monitoring, alerting, and
-                                controlling irrigation patterns, reducing water usage by 30%.
-                            </p>
-                        </div>
-                        <div>
-                            <h4>Student Management System</h4>
-                            <p>
-                                Implemented with Bootstrap, React, and Django; streamlined
-                                administrative tasks for a primary school, reducing paperwork by
-                                20%.
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- Contact Section -->
-                    <section id="contact" class="py-5 text-center">
-                        <h1>Contact</h1>
-                        <p><a href="mailto:okiror1vinald@gmail.com">okiror1vinald@gmail.com</a></p>
-                        <p>
-                            <a href="https://www.linkedin.com/in/okiror-samuel" target="_blank"
-                                >LinkedIn</a
-                            >
-                            <a href="https://github.com/vinald" target="_blank">GitHub</a>
-                        </p>
-                    </section>
+                <!-- Soft Skills Section -->
+                <h4 class="mt-4">Soft Skills</h4>
+                <div class="soft-skills">
+                    <p>
+                        <span>Problem-Solving</span> &nbsp; <span>Adaptability</span> &nbsp;
+                        <span>Communication</span> &nbsp; <span>Teamwork</span> &nbsp;
+                        <span>Time Management</span> &nbsp;
+                        <span>Quick Learner</span>
+                    </p>
                 </div>
-            </div>
+            </section>
 
-            <!-- Footer -->
-            <footer id="footer" class="bg-dark text-light text-center py-2">
-                <p>&copy; 2024 OKIROR SAMUEL VINALD</p>
-            </footer>
+            <!-- Projects Section -->
+            <section id="projects" class="mb-5">
+                <h2 class="text-center mb-4 text-uppercase">Projects</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Lender Count Prediction System</h4>
+                        <p>
+                            Built a machine learning model predicting the number of potential
+                            lenders based on loan amount and repayment term.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Luganda Voice-Controlled System</h4>
+                        <p>
+                            Developed using Python, TensorFlow, and embedded systems for hands-free
+                            operation for disabled users.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Smart Irrigation System</h4>
+                        <p>
+                            Developed a smart system integrating machine learning to optimize water
+                            usage based on real-time sensor data, reducing water consumption by 30%.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Blog Website</h4>
+                        <p>
+                            Created a dynamic blog platform with features for adding, editing, and
+                            deleting posts. Designed a responsive and user-friendly interface using
+                            Node.js, HTML, and Bootstrap.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Voice-Controlled Wheelchair</h4>
+                        <p>
+                            Engineered a voice-activated wheelchair system using speech recognition,
+                            enabling hands-free control for users with physical impairments,
+                            significantly improving accessibility.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light text-center py-2">
+            <p>&copy; 2024 OKIROR SAMUEL VINALD</p>
+        </footer>
 
         <!-- Bootstrap JS -->
         <script
@@ -297,5 +356,7 @@
             integrity="sha384-oB6XotzWivPXFzXAF2bbG5ebxNKGqq2gkbJjKJDA4NUFmSQU5zYX44ldE/pHwLk2"
             crossorigin="anonymous"
         ></script>
+        <!-- Custom JS -->
+        <script src="assets/scripts.js"></script>
     </body>
 </html>
