@@ -85,6 +85,12 @@ footer {
     text-align: justify;
 }
 
+/* Custom styles for images */
 .project-img {
-    width: 100px;
+    width: 100%; /* Makes the image take up the full width of its container */
+    max-width: 400px; 
+    height: auto; 
+    /* display: block;  */
+    margin: 20px auto; /* Centers the image and adds margin */
 }
+
