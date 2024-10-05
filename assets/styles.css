@@ -87,10 +87,15 @@ footer {
 
 /* Custom styles for images */
 .project-img {
-    width: 100%; /* Makes the image take up the full width of its container */
-    max-width: 400px; 
-    height: auto; 
-    /* display: block;  */
-    margin: 20px auto; /* Centers the image and adds margin */
+    width: 400px; 
+    height: 350px; 
+    object-fit: cover; 
+    margin-right: 10px;
 }
 
+
+.profile {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+}

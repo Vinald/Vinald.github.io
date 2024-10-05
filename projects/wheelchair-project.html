@@ -18,19 +18,75 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="../assets/styles.css" />
     </head>
+
     <body>
-        <div class="container">
+        <div class="container text-light mt-5">
             <h1>Luganda Voice-Controlled Wheelchair System</h1>
+            <h2>Project Summary</h2>
+            <p class="lead">
+                I developed a Luganda Voice-Controlled Wheelchair System, aimed at enhancing mobility for Luganda-speaking individuals with physical disabilities. This system integrates Luganda voice commands with speech intent recognition technology to control wheelchair movements.
+            </p>
+
+            <h2>Objective</h2>
+            <p class="lead">
+                The primary objective was to develop a voice-controlled wheelchair that supports Luganda commands, allowing users to control the wheelchair using their voice, improving their independence and accessibility.
+            </p>
+
+            <h2>System Components</h2>
+            <p class="lead">
+                The system integrates both hardware and software, utilizing a Raspberry Pi for processing Luganda voice commands and controlling the wheelchair’s motors.
+            </p>
+
+            <h3>Hardware</h3>
+            <p class="lead">
+                At the core of the system is a Raspberry Pi 3B+, which I programmed to process commands like "mumaaso" (forward), "emabega" (backward), "ddyo" (right), "kkono" (left), "yimirira" (stop), and the wake word "Gaali." It translates these commands into motor actions, allowing dynamic control of the wheelchair.
+            </p>
+            <img src="../assets/images/1.jpg" alt="Hardware" class="project-img" />
+            <img src="../assets/images/2.jpg" alt="Hardware" class="project-img" />
+
+            <h3>Machine Learning</h3>
+            <p class="lead">
+                I developed a speech intent recognition model using MFCC and Mel-spectrogram audio features to process Luganda commands. The model was deployed on the Raspberry Pi, which allows the system to respond to user commands accurately.
+            </p>
+
+            <h3>Web Application</h3>
+            <p class="lead">
+                I also developed a web-based interface to monitor system performance and remotely control the wheelchair. The web app displays live sensor data and allows users to adjust settings or control the wheelchair remotely.
+            </p>
             <img
-                src="../assets/images/wheelchair.jpg"
-                alt="Voice-Controlled Wheelchair System"
+                src="../assets/images/web1.jpg"
+                alt="Luganda Voice-Controlled Wheelchair System Web Application"
                 class="project-img"
             />
+            <img
+                src="../assets/images/web2.jpg"
+                alt="Luganda Voice-Controlled Wheelchair System Web Application"
+                class="project-img"
+            />
+            <p class="lead">
+                By integrating Bluetooth connectivity, on-site adjustments via mobile devices are supported, making the system adaptable and user-friendly.
+            </p>
 
-            <h2>UNDER DEVELOPMENT</h2>
-            <p>This pageis currently under development.</p>
-
-            <a href="../index.html" class="btn btn-primary">Main Page</a>
+            <h3>Prototype</h3>
+            <img
+                src="../assets/images/irrigation.jpg"
+                alt="Luganda Voice-Controlled Wheelchair System"
+                class="project-img mb-4"
+            />
+            <img
+                src="../assets/images/irrigation2.jpg"
+                alt="Luganda Voice-Controlled Wheelchair System"
+                class="project-img mb-2"
+            />
+            <p>
+                <a href="../index.html" class="btn btn-primary">Main Page</a>
+                <a
+                    href="https://github.com/Vinald/Luganda_Voice_Controlled_Wheelchair"
+                    class="btn btn-info"
+                    target="_blank"
+                    >GitHub</a
+                >
+            </p>
         </div>
 
         <!-- Bootstrap JS -->
