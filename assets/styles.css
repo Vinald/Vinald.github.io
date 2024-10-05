@@ -99,3 +99,9 @@ footer {
     height: 200px; 
     object-fit: cover; 
 }
+
+.profile-lug {
+    width: 400px; 
+    height: 350px; 
+    object-fit: cover; 
+}
