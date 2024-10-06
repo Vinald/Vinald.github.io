@@ -51,83 +51,107 @@
         </nav>
 
         <div class="container text-light">
-            <h1 class="text-center my-5">AGRIWAVE SMART IRRIGATION SYSTEM</h1>
+            <h1 class="text-center my-4">AGRIWAVE SMART IRRIGATION SYSTEM</h1>
             <h2>Project Summary</h2>
             <p class="lead">
-                I had the opportunity to develop an advanced Smart Irrigation System as part of my
-                work with netLabs!lJG. This project aimed to create a more efficient and sustainable
-                irrigation solution for a forward-thinking farm client by integrating IoT and
-                machine learning technology.
+                The Agriwave Smart Irrigation System is an innovative solution designed to address
+                the critical issue of water management in agriculture. The system, developed as part
+                of a collaborative project with netLabs!lJG, integrates Internet of Things (IoT)
+                technologies and machine learning algorithms to optimize water usage, reduce
+                operational costs, and enhance crop yields. Leveraging real-time data from sensors,
+                this system offers a modern, efficient, and sustainable approach to irrigation
+                management.
+            </p>
+            <p class="text-center">
+                <img
+                    src="../assets/images/method.png"
+                    alt="Hardware"
+                    class="rounded-5 img-fluid mb-3"
+                />
             </p>
 
             <h2>Objective</h2>
             <p class="lead">
-                The project’s primary objective was to optimize water usage, increase crop yield,
-                and reduce operational costs by implementing intelligent irrigation scheduling based
-                on real-time data.
+                The primary objective of the Smart Irrigation System is to provide an automated and
+                intelligent irrigation solution that optimizes water delivery based on environmental
+                conditions. By integrating IoT with machine learning, the system aims to boost crop
+                productivity while minimizing water wastage. This ensures sustainable farming
+                practices, especially in water-scarce regions.
             </p>
 
             <h2>System Components</h2>
             <p class="lead">
-                The system we developed incorporates both hardware and software components to
-                provide a seamless, automated irrigation solution.
+                The system consists of both hardware and software components that work together to
+                provide an autonomous irrigation solution.
             </p>
 
             <h3>Hardware</h3>
             <p class="lead">
-                At the core of the system is the ESP32 micro-controller board, which I programmed to
-                handle data from various sensors, including soil moisture, temperature, and light
-                intensity sensors. These sensors provided critical data to drive the irrigation
-                process.
+                The system is built around the ESP32 microcontroller, which serves as the main
+                control unit. Various sensors, including soil moisture, submersible temperature, and
+                light-dependent resistors (LDR), provide real-time environmental data essential for
+                irrigation decisions. A water pump is connected to the system and activated based on
+                the sensor readings and machine learning model predictions.
             </p>
             <p class="text-center">
+                <img
+                    src="../assets/images/circuit.png"
+                    alt="Circuit"
+                    class="project-img rounded-5 img-fluid mb-3"
+                />
                 <img
                     src="../assets/images/1.jpg"
                     alt="Hardware"
                     class="project-img rounded-5 img-fluid mb-3"
                 />
-                <img
-                    src="../assets/images/2.jpg"
-                    alt="Hardware"
-                    class="project-img rounded-5 img-fluid mb-3"
-                />
             </p>
 
-            <h3>Machine Learning</h3>
+            <h3>Machine Learning Integration</h3>
             <p class="lead">
-                One of the most important aspects of the system was the integration of machine
-                learning algorithms that I developed. These algorithms analyzed the sensor data to
-                determine optimal irrigation schedules based on environmental conditions like soil
-                moisture and light intensity.
+                Four machine learning models—Random Forest, XGBoost, Support Vector Machine (SVM),
+                and Logistic Regression—were trained to predict optimal irrigation schedules. The
+                Random Forest model achieved the highest accuracy of 90.67%, and it was deployed on
+                the ESP32 microcontroller to make autonomous decisions regarding irrigation needs.
+                The system dynamically adjusts water supply based on real-time conditions like soil
+                moisture, temperature, and light intensity.
+            </p>
+            <p class="text-center">
+                <img
+                    src="../assets/images/models.png"
+                    alt="Models"
+                    class="rounded-5 img-fluid mb-3"
+                />
             </p>
 
             <h3>Web Application</h3>
             <p class="lead">
-                I also developed a web application to allow farmers to remotely monitor the system
-                in real-time. The app provided visualizations of sensor data, irrigation trends, and
-                allowed remote control of irrigation settings. The inclusion of Bluetooth
-                connectivity enabled on-site adjustments via mobile devices, providing flexibility
-                and control to the farmer.
-            </p>
-            <p class="text-center">
-                <img
-                    src="../assets/images/web1.jpg"
-                    alt="Smart Irrigation System Web Application"
-                    class="project-img rounded-5 img-fluid mb-3"
-                />
-                <img
-                    src="../assets/images/web2.jpg"
-                    alt="Smart Irrigation System Web Application"
-                    class="project-img rounded-5 img-fluid mb-3"
-                />
-            </p>
-            <p class="lead">
-                The system also integrated actuators for automatic irrigation based on the machine
-                learning model's recommendations. This dynamic response to changing conditions
-                helped optimize water delivery for healthy crop growth.
+                The accompanying web application was developed using the Flask framework and offers
+                real-time visualization of sensor data. Farmers can monitor the system's
+                performance, view irrigation trends, and control settings remotely. The app
+                integrates with Firebase to receive live updates and visualizes the latest sensor
+                data through dynamic charts.
             </p>
 
-            <h3 class="text-center my-5">Prototype</h3>
+            <p class="lead">
+                The web app allows manual control for farmers who may want to adjust irrigation
+                settings based on specific requirements. It also facilitates the selection of crops
+                and irrigation thresholds to optimize water delivery for different plant types.
+            </p>
+
+            <p class="text-center">
+                <img
+                    src="../assets/images/dash_board.png"
+                    alt="Dash board"
+                    class="project-img rounded-5 img-fluid mb-3"
+                />
+                <img
+                    src="../assets/images/realtime_data.png"
+                    alt="Smart Irrigation System Web Application"
+                    class="project-img rounded-5 img-fluid mb-3"
+                />
+            </p>
+
+            <h3 class="text-center my-3">Prototype</h3>
             <p class="text-center">
                 <img
                     src="../assets/images/irrigation.jpg"
@@ -141,7 +165,7 @@
                 />
             </p>
 
-            <h2 class="text-center my-5">Meet the Team</h2>
+            <h2 class="text-center my-3">Meet the Team</h2>
             <div class="row">
                 <div class="col-md-3 text-center">
                     <img
@@ -225,7 +249,7 @@
             <div class="row">
                 <div class="col-md-3 text-center">
                     <img
-                        src="../assets/images/hisham.jpg"
+                        src="../assets/images/hisham.png"
                         alt="Team Member Hisham"
                         class="rounded-5 mb-3 profile img-fluid"
                     />
