@@ -16,34 +16,10 @@
         <link rel="stylesheet" href="assets/styles.css" />
     </head>
     <body>
-        <!-- Header Section -->
-        <header class="bg-dark text-light py-4">
-            <div class="container text-center">
-                <h1 class="display-4 text-light">OKIROR SAMUEL VINALD</h1>
-                <h4 class="text-light">Computer Engineer | Web Development | Data Science</h4>
-                <p>
-                    Email:
-                    <a href="mailto:okiror1vinald@gmail.com">okiror1vinald@gmail.com</a>
-                    GitHub:
-                    <a href="https://github.com/vinald" rel="noopener" target="_blank">Vinald</a>
-                    LinkedIn:
-                    <a
-                        href="https://linkedin.com/in/okiror-samuel-vinald-91a978254"
-                        rel="noopener"
-                        target="_blank"
-                        >Okiror Samuel Vinald</a
-                    >
-                </p>
-
-                <p>Contact: +256 746 178 844</p>
-                <a href="assets/resume.pdf" class="btn btn-primary">Download Resume</a>
-            </div>
-        </header>
-
         <!-- Navigation Section -->
-        <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="index.html">Vinald Portfolio</a>
+                <a class="navbar-brand fw-bold" href="index.html">OKIROR SAMUEL VINALD</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -58,19 +34,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#intro">ABOUT</a>
+                            <a class="nav-link active" aria-current="page" href="#intro">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#experience">EXPERIENCE</a>
+                            <a class="nav-link" href="#experience">Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#education">EDUCATION</a>
+                            <a class="nav-link" href="#education">Education</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills">SKILLS</a>
+                            <a class="nav-link" href="#skills">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#projects">PROJECTS</a>
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacts">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -78,30 +58,90 @@
         </nav>
 
         <!-- Main Content -->
-        <div class="container my-4">
+        <div class="container my-5">
+            <!-- Header Section -->
+            <header class="bg-dark text-light py-5 my-5">
+                <div class="container text-center">
+                    <h4 class="fw-light mb-3">Hey, I am</h4>
+                    <h1 class="display-4 fw-bold text-warning mb-3">Okiror Samuel Vinald</h1>
+                    <h3 class="text-secondary fw-bold mb-4">Computer Engineer</h3>
+                    <div class="mb-4">
+                        <p class="mb-2 lead">
+                            <strong>Email:</strong>
+                            <a href="mailto:okiror1vinald@gmail.com" class="text-warning"
+                                >okiror1vinald@gmail.com</a
+                            >
+                        </p>
+                        <p class="mb-2 lead">
+                            <strong>GitHub:</strong>
+                            <a
+                                href="https://github.com/vinald"
+                                class="text-warning"
+                                rel="noopener"
+                                target="_blank"
+                                >Vinald</a
+                            >
+                        </p>
+                        <p class="mb-2 lead">
+                            <strong>LinkedIn:</strong>
+                            <a
+                                href="https://linkedin.com/in/okiror-samuel-vinald-91a978254"
+                                class="text-warning"
+                                rel="noopener"
+                                target="_blank"
+                                >Okiror Samuel Vinald</a
+                            >
+                        </p>
+                        <p class="lead"><strong>Contact:</strong> +256 746 178 844</p>
+                    </div>
+                    <a
+                        href="assets/resume.pdf"
+                        class="btn btn-primary btn-lg rounded-pill shadow-sm"
+                        >Download Resume</a
+                    >
+                </div>
+            </header>
+
             <!-- Intro Section -->
-            <section id="intro" class="mb-4">
-                <div class="row align-items-center">
-                    <div class="col-md-4 text-center">
+            <section id="intro" class="mb-5 py-5">
+                <div class="row align-items-center justify-content-center">
+                    <!-- Profile Image -->
+                    <div class="col-md-5 text-center mb-4 mb-md-0">
                         <img
-                            src="assets/images/profile.jpg"
+                            src="assets/images/profile_new_1.jpg"
                             alt="Vinald"
-                            class="img-fluid rounded-5 mb-3"
+                            class="img-fluid rounded-5 shadow-lg"
+                            style="max-width: 300px; border: 5px solid black"
                         />
                     </div>
-                    <div class="col-md-8">
-                        <p class="lead text-justify text-light">
-                            Enthusiastic and driven Computer Engineer with proficiency in Python and
-                            JavaScript, and a background in software development and data science.
-                            Experienced in designing and deploying innovative software solutions
-                            through hands-on internships and academic projects. Adept at
-                            problem-solving, collaborating within team environments, and adapting
-                            quickly to new technologies. Proficient in modern frameworks like React,
-                            Node.js, and Django, and committed to continuous learning and
-                            professional growth. Eager to contribute to dynamic software development
-                            teams and learn from seasoned mentors while building real-world
-                            applications in a fast-paced environment.
+
+                    <!-- Intro Text -->
+                    <div class="col-md-7 text-light">
+                        <h2 class="fw-bold mb-4">About Me</h2>
+                        <p class="lead mb-4 text-light">
+                            I am an enthusiastic and driven <strong>Computer Engineer</strong> with
+                            expertise in <strong>Python</strong>, <strong>Java</strong>,
+                            <strong>JavaScript</strong>, and modern frameworks such as
+                            <strong>React</strong>, <strong>Node.js</strong>, and
+                            <strong>Django</strong>. I specialize in designing and deploying
+                            innovative software solutions, leveraging my background in software
+                            development and data science. My strengths lie in problem-solving,
+                            collaborating effectively in team environments, and quickly adapting to
+                            new technologies and challenges.
                         </p>
+
+                        <p>
+                            Through hands-on internships and real-world projects, I have honed my
+                            ability to create impactful technologies that address complex problems.
+                            I am passionate about continuous learning and professional growth,
+                            thriving in dynamic and fast-paced environments. My goal is to
+                            contribute to teams that develop meaningful applications and deliver
+                            real-world solutions.
+                        </p>
+
+                        <h5 class="text-warning">
+                            Software Development | Web Development | Machine Learning | Data Science
+                        </h5>
                     </div>
                 </div>
             </section>
@@ -111,7 +151,7 @@
                 <h2 class="text-center mb-4 text-uppercase">Experience</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <span class="date">August 2024 - Present</span>
+                        <span class="date">August 2024 - October 2024</span>
                         <h4>Data Science and Web Development Intern, Zidio Development</h4>
                         <p>
                             <strong>Skills:</strong> Python, JavaScript (Node.js), SQL, Excel,
@@ -276,7 +316,7 @@
             </section>
 
             <!-- Education Section -->
-            <section id="experience" class="mb-4 text-light">
+            <section id="education" class="mb-4 text-light">
                 <h2 class="text-center mb-4 text-uppercase">Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -349,7 +389,7 @@
                             </div>
                             <div class="timeline-item">
                                 <h4>Machine Learning</h4>
-                                <p>Supervised Learning </p>
+                                <p>Supervised Learning</p>
                                 <p>Unsupervised Learning</p>
                                 <p>Deep Learning</p>
                                 <p>Feature Engineering</p>
@@ -504,6 +544,11 @@
                         </p>
                     </div>
                 </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contacts" class="mb-4">
+                <h2 class="text-center mb-4 text-uppercase">Contact Me</h2>
             </section>
         </div>
 
