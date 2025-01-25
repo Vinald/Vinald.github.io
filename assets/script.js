@@ -16,3 +16,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         });
     });
 });
+
+// Set the current year in the footer
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+});
