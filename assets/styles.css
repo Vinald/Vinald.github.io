@@ -1,4 +1,9 @@
 /* /* General Styling */
+html {
+    scroll-padding-top: 70px; /* Adjust this value to match your navbar height */
+  }
+
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(90deg, #333, #414547);
