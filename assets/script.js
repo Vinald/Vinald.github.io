@@ -165,12 +165,9 @@ function copyToClipboard(text) {
 
 // EmailJS Contact Form Handler
 function initializeEmailJS() {
-    // Wait for EmailJS library to be loaded
-    if (typeof emailjs === 'undefined') {
-        console.warn('EmailJS library not yet loaded, retrying...');
-        setTimeout(initializeEmailJS, 100);
-        return;
-    }
+    // This function is called by the onload event of the EmailJS script tag
+    // At this point, emailjs library is guaranteed to be loaded
+    console.log('EmailJS library loaded successfully');
     
     // Initialize EmailJS with public key from GitHub Actions secrets
     // In production, this is injected by GitHub Actions workflow
@@ -222,11 +219,6 @@ function initializeEmailJS() {
         });
     }
 }
-
-// Initialize EmailJS when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    initializeEmailJS();
-});
 
 // Lazy Loading for Images
 if ('IntersectionObserver' in window) {
