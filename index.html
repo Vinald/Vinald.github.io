@@ -1219,45 +1219,16 @@
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- EmailJS Library with error handling -->
-        <script type="text/javascript">
-            // Load EmailJS with error handling and fallback
-            var emailJSScriptTag = document.createElement('script');
-            emailJSScriptTag.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/build/index.min.js';
-            emailJSScriptTag.type = 'text/javascript';
-            emailJSScriptTag.onload = function() {
-                console.log('EmailJS script loaded successfully');
-            };
-            emailJSScriptTag.onerror = function() {
-                console.warn('EmailJS CDN failed to load, will use fallback email method');
-                // Trigger initialization anyway - it will use fallback
-                if (window.initializeEmailJS) {
-                    window.initializeEmailJS();
-                }
-            };
-            document.head.appendChild(emailJSScriptTag);
-        </script>
-        <!-- EmailJS Configuration -->
+        <!-- EmailJS Library (v4 - latest with better CORS support) -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <!-- EmailJS Configuration (injected by GitHub Actions) -->
         <script src="assets/emailjs-config.js"></script>
-        <!-- Debug Script to Check Secrets -->
-        <script>
-            // Wait a bit for config to load, then check
-            setTimeout(function() {
-                console.log('=== EmailJS Configuration Check ===');
-                console.log('Public Key:', window.EMAILJS_PUBLIC_KEY ? '✓ Set' : '✗ Not set');
-                console.log('Service ID:', window.EMAILJS_SERVICE_ID ? '✓ Set' : '✗ Not set');
-                console.log('Template ID:', window.EMAILJS_TEMPLATE_ID ? '✓ Set' : '✗ Not set');
-                if (window.EMAILJS_PUBLIC_KEY && window.EMAILJS_PUBLIC_KEY.includes('YOUR_')) {
-                    console.warn('⚠️ Placeholder credentials detected - using fallback method');
-                }
-            }, 100);
-        </script>
         <!-- Custom JS -->
         <script src="assets/script.js"></script>
+        <!-- Initialize EmailJS on page load -->
         <script>
-            // Initialize EmailJS once the page is fully loaded
             document.addEventListener('DOMContentLoaded', function() {
-                setTimeout(initializeEmailJS, 1500);
+                initializeEmailJS();
             });
         </script>
     </body>
