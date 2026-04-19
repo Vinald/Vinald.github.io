@@ -247,3 +247,7 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
+
+// GitHub Actions will inject EmailJS secrets here during deployment
+// The secrets are injected by the GitHub Actions workflow into a separate file
+// Make sure window.EMAILJS_PUBLIC_KEY, window.EMAILJS_SERVICE_ID, and window.EMAILJS_TEMPLATE_ID are available
