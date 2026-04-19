@@ -460,3 +460,108 @@ h2 {
         animation: fadeInUp 0.6s ease-out !important;
     }
 }
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.back-to-top:hover {
+    background-color: #fff;
+    color: #ffc107;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.5);
+}
+
+.back-to-top.show {
+    display: flex;
+}
+
+/* Contact Form Styles */
+#contact .form-control {
+    transition: all 0.3s ease;
+    color: #fff !important;
+}
+
+#contact .form-control:focus {
+    background-color: #495057 !important;
+    border-color: #ffc107 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    color: #fff !important;
+}
+
+#contact .form-label {
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#contact .btn-outline-warning {
+    transition: all 0.3s ease;
+}
+
+#contact .btn-outline-warning:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+/* Copy to Clipboard Button Animation */
+.btn-outline-warning.copied::after {
+    content: " Copied!";
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Skill Level Indicators */
+.skill-level {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.skill-level.beginner {
+    background-color: rgba(100, 150, 255, 0.2);
+    color: #6496ff;
+}
+
+.skill-level.intermediate {
+    background-color: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+}
+
+.skill-level.expert {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+}
+
+/* Mobile Responsiveness for Back-to-Top */
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+}

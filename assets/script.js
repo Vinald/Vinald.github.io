@@ -126,3 +126,112 @@ document.querySelectorAll('a').forEach(link => {
         this.style.transition = 'all 0.3s ease';
     });
 });
+
+// Back to Top Button Functionality
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
+backToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Copy to Clipboard Function
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(function() {
+        // Show feedback
+        const button = event.target;
+        const originalText = button.innerText;
+        button.innerText = '✓ Copied!';
+        button.classList.add('copied');
+        
+        setTimeout(function() {
+            button.innerText = originalText;
+            button.classList.remove('copied');
+        }, 2000);
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
+
+// EmailJS Contact Form Handler
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS with public key from GitHub Actions secrets
+    // In production, this is injected by GitHub Actions workflow
+    emailjs.init(window.EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
+    
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Disable button during submission
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
+            
+            // Prepare template parameters
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: "okiror1vinald@gmail.com" // Your email address
+            };
+            
+            // Send email using EmailJS (service and template IDs from GitHub Actions secrets)
+            emailjs.send(
+                window.EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
+                window.EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
+                templateParams
+            ).then(function(response) {
+                // Success
+                formStatus.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle"></i> Message sent successfully! I\'ll get back to you soon.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                contactForm.reset();
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+            }, function(error) {
+                // Error
+                formStatus.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Failed to send message. Please try again or contact directly via email.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                console.error('EmailJS Error:', error);
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+            });
+        });
+    }
+});
+
+// Lazy Loading for Images
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                observer.unobserve(img);
+            }
+        });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
