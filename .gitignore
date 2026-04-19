@@ -167,3 +167,4 @@ celerybeat-schedule
 
 # GitHub Actions injected secrets (auto-generated during deploy)
 assets/inject-secrets.js
+assets/emailjs-config.js

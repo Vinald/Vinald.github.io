@@ -164,22 +164,44 @@ function copyToClipboard(text) {
 }
 
 // EmailJS Contact Form Handler
+let emailJSRetries = 0;
+const MAX_EMAILJS_RETRIES = 100; // ~10 seconds with 100ms delays
+
 function initializeEmailJS() {
     // Check if emailjs is available
     if (typeof emailjs === 'undefined') {
-        console.warn('EmailJS not yet available, scheduling retry...');
-        setTimeout(initializeEmailJS, 100);
+        emailJSRetries++;
+        if (emailJSRetries < MAX_EMAILJS_RETRIES) {
+            setTimeout(initializeEmailJS, 100);
+        } else {
+            console.error('EmailJS failed to load after multiple retries. Using fallback email method.');
+            setupFallbackEmailForm();
+        }
         return;
     }
     
     console.log('EmailJS library loaded successfully');
+    setupEmailJSForm();
+}
+
+// Setup EmailJS contact form
+function setupEmailJSForm() {
+    // Get credentials from window object or use fallback
+    const publicKey = window.EMAILJS_PUBLIC_KEY || localStorage.getItem('emailjs_public_key');
     
-    // Initialize EmailJS with public key from GitHub Actions secrets
-    // In production, this is injected by GitHub Actions workflow
+    if (!publicKey) {
+        console.warn('EmailJS Public Key not configured. Using fallback email method.');
+        setupFallbackEmailForm();
+        return;
+    }
+    
+    // Initialize EmailJS with public key
     try {
-        emailjs.init(window.EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
+        emailjs.init(publicKey);
+        console.log('EmailJS initialized successfully');
     } catch (error) {
         console.error('Failed to initialize EmailJS:', error);
+        setupFallbackEmailForm();
         return;
     }
     
@@ -191,41 +213,105 @@ function initializeEmailJS() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Get credentials
+            const serviceId = window.EMAILJS_SERVICE_ID || localStorage.getItem('emailjs_service_id');
+            const templateId = window.EMAILJS_TEMPLATE_ID || localStorage.getItem('emailjs_template_id');
+            
+            if (!serviceId || !templateId) {
+                formStatus.innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Email service is not properly configured. Please use the email option below.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                console.error('EmailJS credentials not found. Service ID:', serviceId, 'Template ID:', templateId);
+                return;
+            }
+            
             // Disable button during submission
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending...';
             
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                formStatus.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Please fill in all fields.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Message';
+                return;
+            }
+            
             // Prepare template parameters
             const templateParams = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value,
-                to_email: "okiror1vinald@gmail.com" // Your email address
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_email: "okiror1vinald@gmail.com"
             };
             
-            // Send email using EmailJS (service and template IDs from GitHub Actions secrets)
-            emailjs.send(
-                window.EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
-                window.EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
-                templateParams
-            ).then(function(response) {
-                // Success
-                formStatus.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle"></i> Message sent successfully! I\'ll get back to you soon.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+            // Send email using EmailJS
+            emailjs.send(serviceId, templateId, templateParams)
+                .then(function(response) {
+                    // Success
+                    console.log('Email sent successfully:', response);
+                    formStatus.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle"></i> Message sent successfully! I\'ll get back to you soon.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                    contactForm.reset();
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Send Message';
+                })
+                .catch(function(error) {
+                    // Error
+                    console.error('EmailJS Error:', error);
+                    formStatus.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Failed to send message. Please try again or contact directly at okiror1vinald@gmail.com.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Send Message';
+                });
+        });
+    } else {
+        console.error('Contact form not found in DOM');
+    }
+}
+
+// Fallback email form - direct email link
+function setupFallbackEmailForm() {
+    console.log('Setting up fallback email method');
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Validation
+            if (!name || !email || !subject || !message) {
+                formStatus.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Please fill in all fields.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+                return;
+            }
+            
+            // Create mailto link
+            const mailtoLink = `mailto:okiror1vinald@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+            
+            // Open default email client
+            window.location.href = mailtoLink;
+            
+            // Show message
+            formStatus.innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert"><i class="bi bi-info-circle"></i> Opening your email client... If it doesn\'t open, please email me directly at okiror1vinald@gmail.com<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+            
+            // Reset form after a delay
+            setTimeout(() => {
                 contactForm.reset();
-                
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message';
-            }, function(error) {
-                // Error
-                formStatus.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Failed to send message. Please try again or contact directly via email.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
-                console.error('EmailJS Error:', error);
-                
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message';
-            });
+            }, 2000);
         });
     }
 }
