@@ -1,15 +1,12 @@
 /**
  * EmailJS Configuration
  * 
- * This file is auto-replaced by GitHub Actions during deployment with real secrets.
- * DO NOT commit real credentials here.
+ * Public key is safe to expose in frontend code.
+ * Security is enforced through domain whitelisting in EmailJS dashboard.
  * 
- * Local development: Update these placeholders with your own EmailJS credentials
- * (or keep them as placeholders to use the fallback email method)
+ * Whitelisted domains: vinald.me, vinald.vercel.app
  */
 
-window.EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY_HERE";
-window.EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID_HERE";
-window.EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID_HERE";
-// - message: Email message body
-// - to_email: Recipient email (okiror1vinald@gmail.com)
+window.EMAILJS_PUBLIC_KEY  = "YOXVT0uZgK5Jd_2MG";
+window.EMAILJS_SERVICE_ID  = "service_tli9fww";
+window.EMAILJS_TEMPLATE_ID = "template_adbvzvp";
