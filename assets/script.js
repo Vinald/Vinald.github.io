@@ -45,6 +45,9 @@ const observer = new IntersectionObserver(function(entries) {
                 element.style.animation = 'slideInLeft 0.6s ease-out forwards';
             } else if (element.classList.contains('img-fluid')) {
                 element.style.animation = 'fadeInUp 0.8s ease-out forwards';
+            } else if (element.classList.contains('mb-5')) {
+                // Experience items
+                element.style.animation = 'slideInLeft 0.6s ease-out forwards';
             }
         } else {
             // Reset animation when element leaves viewport
@@ -62,6 +65,11 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Observe timeline items
     document.querySelectorAll('.timeline-item').forEach(item => {
+        observer.observe(item);
+    });
+    
+    // Observe experience items (divs in experience section)
+    document.querySelectorAll('#experience .mb-5').forEach(item => {
         observer.observe(item);
     });
     

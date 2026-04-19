@@ -285,6 +285,51 @@ section {
     transform: scale(1.2);
 }
 
+/* Experience Items Hover Effects */
+#experience .mb-5 {
+    transition: all 0.3s ease;
+    padding: 15px 0;
+    border-left: 4px solid transparent;
+    padding-left: 15px;
+    margin-left: 0;
+}
+
+#experience .mb-5:hover {
+    border-left-color: #ffc107;
+    padding-left: 20px;
+    box-shadow: inset 0 0 0 1px rgba(255, 193, 7, 0.2);
+}
+
+#experience .mb-5 .date {
+    transition: all 0.3s ease;
+    color: #ffc107 !important;
+}
+
+#experience .mb-5:hover .date {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#experience .mb-5 h4 {
+    transition: all 0.3s ease;
+    color: #007bff !important;
+}
+
+#experience .mb-5:hover h4 {
+    color: #ffc107 !important;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+#experience .mb-5 ul li {
+    transition: all 0.3s ease;
+    color: #ddd;
+}
+
+#experience .mb-5:hover ul li {
+    color: #fff;
+    margin-left: 8px;
+}
+
 /* Footer */
 footer {
     background-color: #343a40;
