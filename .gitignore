@@ -166,5 +166,7 @@ celerybeat-schedule
 *~
 
 # GitHub Actions injected secrets (auto-generated during deploy)
+# Note: emailjs-config.js is committed as a placeholder
+# The workflow overwrites it with real secrets at deploy time
 assets/inject-secrets.js
-assets/emailjs-config.js
+
