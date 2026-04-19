@@ -1239,6 +1239,19 @@
         </script>
         <!-- EmailJS Configuration -->
         <script src="assets/emailjs-config.js"></script>
+        <!-- Debug Script to Check Secrets -->
+        <script>
+            // Wait a bit for config to load, then check
+            setTimeout(function() {
+                console.log('=== EmailJS Configuration Check ===');
+                console.log('Public Key:', window.EMAILJS_PUBLIC_KEY ? '✓ Set' : '✗ Not set');
+                console.log('Service ID:', window.EMAILJS_SERVICE_ID ? '✓ Set' : '✗ Not set');
+                console.log('Template ID:', window.EMAILJS_TEMPLATE_ID ? '✓ Set' : '✗ Not set');
+                if (window.EMAILJS_PUBLIC_KEY && window.EMAILJS_PUBLIC_KEY.includes('YOUR_')) {
+                    console.warn('⚠️ Placeholder credentials detected - using fallback method');
+                }
+            }, 100);
+        </script>
         <!-- Custom JS -->
         <script src="assets/script.js"></script>
         <script>
