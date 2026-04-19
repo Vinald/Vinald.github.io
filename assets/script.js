@@ -277,7 +277,7 @@ function setupEmailJSForm() {
     }
 }
 
-// Fallback email form - direct email link
+// Fallback email form - manual email display
 function setupFallbackEmailForm() {
     console.log('Setting up fallback email method');
     const contactForm = document.getElementById('contactForm');
@@ -299,22 +299,37 @@ function setupFallbackEmailForm() {
                 return;
             }
             
-            // Create mailto link
-            const mailtoLink = `mailto:okiror1vinald@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+            // Show success message with email instructions
+            const emailBody = `From: ${name} (${email})\n\n${message}`;
+            const encodedBody = encodeURIComponent(emailBody);
+            const encodedSubject = encodeURIComponent(subject);
             
-            // Create a temporary link and click it (more reliable than window.location.href)
-            const link = document.createElement('a');
-            link.href = mailtoLink;
-            link.click();
-            
-            // Show message
-            formStatus.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle"></i> Message prepared! Your email client should open shortly. If it doesn\'t, you can email me directly at <strong>okiror1vinald@gmail.com</strong><button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+            formStatus.innerHTML = `
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <div class="mb-3">
+                        <i class="bi bi-check-circle"></i> <strong>Message ready to send!</strong>
+                    </div>
+                    <p class="mb-3">Your message has been prepared. Please copy it and send it to:</p>
+                    <div class="bg-light p-3 rounded mb-3">
+                        <strong>Email:</strong> okiror1vinald@gmail.com<br>
+                        <strong>Subject:</strong> ${subject}
+                        <hr class="my-2">
+                        <strong>Message:</strong><br>
+                        <small style="white-space: pre-wrap;">${name} (${email})\n\n${message}</small>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="mailto:okiror1vinald@gmail.com?subject=${encodedSubject}&body=${encodedBody}" class="btn btn-success btn-sm">
+                            <i class="bi bi-envelope"></i> Send via Email Client
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                </div>
+            `;
             
             // Reset form after a delay
             setTimeout(() => {
                 contactForm.reset();
-                formStatus.innerHTML = '';
-            }, 3000);
+            }, 5000);
         });
     }
 }
