@@ -1,12 +1,11 @@
 /**
- * EmailJS Configuration
+ * EmailJS Configuration - Auto-injected by GitHub Actions
+ * DO NOT COMMIT REAL CREDENTIALS - They are injected from GitHub Secrets at build time
  * 
  * Public key is safe to expose in frontend code.
  * Security is enforced through domain whitelisting in EmailJS dashboard.
- * 
- * Whitelisted domains: vinald.me, vinald.vercel.app
  */
 
-window.EMAILJS_PUBLIC_KEY  = "PUBLIC_KEY";
-window.EMAILJS_SERVICE_ID  = "SERVICE_ID";
-window.EMAILJS_TEMPLATE_ID = "TEMPLATE_ID";
+window.EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+window.EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
+window.EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
