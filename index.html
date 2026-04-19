@@ -1221,7 +1221,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Custom JS -->
         <script src="assets/script.js"></script>
-        <!-- EmailJS Library (loaded AFTER script.js) -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js" onload="initializeEmailJS()"></script>
+        <!-- EmailJS Library (using unpkg CDN with CORS support) -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.0.0/dist/index.global.min.js" onload="initializeEmailJS()"></script>
     </body>
 </html>
