@@ -165,13 +165,23 @@ function copyToClipboard(text) {
 
 // EmailJS Contact Form Handler
 function initializeEmailJS() {
-    // This function is called by the onload event of the EmailJS script tag
-    // At this point, emailjs library is guaranteed to be loaded
+    // Check if emailjs is available
+    if (typeof emailjs === 'undefined') {
+        console.warn('EmailJS not yet available, scheduling retry...');
+        setTimeout(initializeEmailJS, 100);
+        return;
+    }
+    
     console.log('EmailJS library loaded successfully');
     
     // Initialize EmailJS with public key from GitHub Actions secrets
     // In production, this is injected by GitHub Actions workflow
-    emailjs.init(window.EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
+    try {
+        emailjs.init(window.EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
+    } catch (error) {
+        console.error('Failed to initialize EmailJS:', error);
+        return;
+    }
     
     const contactForm = document.getElementById('contactForm');
     const formStatus = document.getElementById('formStatus');
