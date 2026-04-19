@@ -7,6 +7,6 @@
  * Whitelisted domains: vinald.me, vinald.vercel.app
  */
 
-window.EMAILJS_PUBLIC_KEY  = "YOXVT0uZgK5Jd_2MG";
-window.EMAILJS_SERVICE_ID  = "service_tli9fww";
-window.EMAILJS_TEMPLATE_ID = "template_adbvzvp";
+window.EMAILJS_PUBLIC_KEY  = "PUBLIC_KEY";
+window.EMAILJS_SERVICE_ID  = "SERVICE_ID";
+window.EMAILJS_TEMPLATE_ID = "TEMPLATE_ID";
