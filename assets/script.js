@@ -164,7 +164,14 @@ function copyToClipboard(text) {
 }
 
 // EmailJS Contact Form Handler
-document.addEventListener('DOMContentLoaded', function() {
+function initializeEmailJS() {
+    // Wait for EmailJS library to be loaded
+    if (typeof emailjs === 'undefined') {
+        console.warn('EmailJS library not yet loaded, retrying...');
+        setTimeout(initializeEmailJS, 100);
+        return;
+    }
+    
     // Initialize EmailJS with public key from GitHub Actions secrets
     // In production, this is injected by GitHub Actions workflow
     emailjs.init(window.EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY");
@@ -214,6 +221,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+}
+
+// Initialize EmailJS when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    initializeEmailJS();
 });
 
 // Lazy Loading for Images
