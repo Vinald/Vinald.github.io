@@ -302,16 +302,19 @@ function setupFallbackEmailForm() {
             // Create mailto link
             const mailtoLink = `mailto:okiror1vinald@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
             
-            // Open default email client
-            window.location.href = mailtoLink;
+            // Create a temporary link and click it (more reliable than window.location.href)
+            const link = document.createElement('a');
+            link.href = mailtoLink;
+            link.click();
             
             // Show message
-            formStatus.innerHTML = '<div class="alert alert-info alert-dismissible fade show" role="alert"><i class="bi bi-info-circle"></i> Opening your email client... If it doesn\'t open, please email me directly at okiror1vinald@gmail.com<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
+            formStatus.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle"></i> Message prepared! Your email client should open shortly. If it doesn\'t, you can email me directly at <strong>okiror1vinald@gmail.com</strong><button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
             
             // Reset form after a delay
             setTimeout(() => {
                 contactForm.reset();
-            }, 2000);
+                formStatus.innerHTML = '';
+            }, 3000);
         });
     }
 }
