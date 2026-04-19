@@ -236,18 +236,18 @@ function setupEmailJSForm() {
             from_email: email,
             subject: subject,
             message: message,
-            to_email: "okiror1vinald@gmail.com"
+            to_email: email
         };
 
         // Send email using EmailJS
         emailjs.send(serviceId, templateId, templateParams)
             .then(function(response) {
-                console.log('✅ Email sent successfully:', response);
+                console.log('Email sent successfully:', response);
                 formStatus.innerHTML = '<div class="alert alert-success alert-dismissible fade show" role="alert"><i class="bi bi-check-circle"></i> Message sent successfully! I\'ll get back to you soon.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
                 contactForm.reset();
             })
             .catch(function(error) {
-                console.error('❌ EmailJS Error:', error);
+                console.error('EmailJS Error:', error);
                 formStatus.innerHTML = '<div class="alert alert-danger alert-dismissible fade show" role="alert"><i class="bi bi-exclamation-triangle"></i> Failed to send message. Please try again or contact directly at okiror1vinald@gmail.com.<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>';
             })
             .finally(function() {
@@ -333,7 +333,3 @@ if ('IntersectionObserver' in window) {
         imageObserver.observe(img);
     });
 }
-
-// GitHub Actions will inject EmailJS secrets here during deployment
-// The secrets are injected by the GitHub Actions workflow into a separate file
-// Make sure window.EMAILJS_PUBLIC_KEY, window.EMAILJS_SERVICE_ID, and window.EMAILJS_TEMPLATE_ID are available
