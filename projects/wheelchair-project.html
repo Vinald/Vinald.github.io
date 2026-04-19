@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Luganda Voice-Controlled Wheelchair System</title>
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="icon" href="assets/images/white.png" type="image/x-icon" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../assets/styles.css" />
+    </head>
+
+    <body>
+        <!-- Navigation Section -->
+        <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">OKIROR SAMUEL VINALD   </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Main Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                href="https://github.com/Vinald/Luganda_voice-controlled_wheelchair_system"
+                                class="btn btn-info"
+                                target="_blank"
+                                rel="noopener"
+                                >GitHub</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-light mt-5">
+            <h1 class="text-center mb-5">Luganda Voice-Controlled Wheelchair System</h1>
+            <h2 class="text-warning">Project Summary</h2>
+            <p class="lead text-light">
+                I developed a Luganda Voice-Controlled Wheelchair System, aimed at enhancing
+                mobility for Luganda-speaking individuals with physical disabilities. This system
+                integrates Luganda voice commands with speech intent recognition technology to
+                control wheelchair movements.
+            </p>
+
+            <h2 class="text-warning">Objective</h2>
+            <p class="lead text-light">
+                The primary objective was to develop a voice-controlled wheelchair that supports
+                Luganda commands, allowing users to control the wheelchair using their voice,
+                improving their independence and accessibility.
+            </p>
+
+            <h2 class="text-warning">System Components</h2>
+            <p class="lead text-light">
+                The system integrates both hardware and software, utilizing a Raspberry Pi for
+                processing Luganda voice commands and controlling the wheelchair’s motors.
+            </p>
+
+            <h3 class="text-primary">Hardware</h3>
+            <p class="lead text-light">
+                At the core of the system is a Raspberry Pi 3B+, which I programmed to process
+                commands like "mumaaso" (forward), "emabega" (backward), "ddyo" (right), "kkono"
+                (left), "yimirira" (stop), and the wake word "Gaali." It translates these commands
+                into motor actions, allowing dynamic control of the wheelchair.
+            </p>
+            <p class="text-center">
+                <img
+                    src="../assets/images/layout.jpg"
+                    alt="Prototype layout"
+                    class="project-img mb-4 rounded-5 img-fluid mb-3"
+                />
+                <img
+                    src="../assets/images/hw.jpg"
+                    alt="Hardware components"
+                    class="project-img mb-4 rounded-5 img-fluid mb-3"
+                />
+            </p>
+
+            <h3 class="text-primary">Machine Learning</h3>
+            <p class="lead text-light">
+                I developed a speech intent recognition model using MFCC and Mel-spectrogram audio
+                features to process Luganda commands. The model was deployed on the Raspberry Pi,
+                which allows the system to respond to user commands accurately.
+            </p>
+
+            <p class="lead text-light">
+                By integrating Bluetooth connectivity, on-site adjustments via mobile devices are
+                supported, making the system adaptable and user-friendly.
+            </p>
+
+            <h3 class="text-center my-5 text-primary">Prototype</h3>
+            <p class="text-center">
+                <img
+                    src="../assets/images/wheelchair.jpg"
+                    alt="prototype"
+                    class="project-img mb-4 rounded-5 img-fluid mb-3"
+                />
+            </p>
+
+            <h2 class="text-center my-5 text-warning">Meet the Team</h2>
+
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img
+                        src="../assets/images/profile.jpg"
+                        alt="Team Member Samuel"
+                        class="rounded-5 mb-3 profile-lug img-fluid"
+                    />
+                    <h4>Okiror Samuel Vinald</h4>
+                    <p class="lead text-light">Partner</p>
+                </div>
+                <div class="col-md-6">
+                    <img
+                        src="../assets/images/addi.jpg"
+                        alt="Team Member Addi"
+                        class="rounded-5 mb-3 profile-lug img-fluid"
+                    />
+                    <h4>Addi A Ankunda</h4>
+                    <p class="lead text-light">Partner</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light text-center py-2">
+            <p>&copy; <span id="currentYear"></span> Okiror Samuel Vinald</p>
+        </footer>
+
+        <!-- current year script -->
+        <script>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
