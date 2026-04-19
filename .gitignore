@@ -164,3 +164,6 @@ celerybeat-schedule
 
 # Vim swap files
 *~
+
+# GitHub Actions injected secrets (auto-generated during deploy)
+assets/inject-secrets.js
