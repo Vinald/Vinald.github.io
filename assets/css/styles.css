@@ -175,6 +175,14 @@ p {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3) !important;
 }
 
+.btn-warning:hover {
+    color: #000 !important;
+}
+
+.btn-outline-light:hover {
+    color: #000 !important;
+}
+
 .btn::before {
     content: '';
     position: absolute;
