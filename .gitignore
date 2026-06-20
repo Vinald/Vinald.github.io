@@ -170,3 +170,4 @@ celerybeat-schedule
 # The workflow overwrites it with real secrets at deploy time
 assets/inject-secrets.js
 
+.claude/
