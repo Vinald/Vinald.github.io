@@ -1,0 +1,227 @@
+<section id="projects" class="py-3 px-2 py-md-4 px-md-3">
+    <h2 class="text-center mb-4 text-uppercase fw-bold">Projects</h2>
+
+    <!-- Visible: first 4 projects -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <img src="/assets/images/irrigation.jpg" class="card-img-top img-fluid rounded-3" alt="Smart Irrigation System" style="height: 200px; object-fit: cover" />
+                <div class="card-body">
+                    <h3 class="card-title">Smart Irrigation System</h3>
+                    <p class="card-text">Developed a smart irrigation system integrating IoT and machine learning for real-time water management, cost reduction, and crop yield improvement. Random Forest model achieved 90.67% accuracy deployed on ESP32.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Python</span>
+                        <span class="badge bg-warning text-dark">TensorFlow</span>
+                        <span class="badge bg-warning text-dark">Flask</span>
+                        <span class="badge bg-warning text-dark">Firebase</span>
+                        <span class="badge bg-warning text-dark">ESP32</span>
+                        <span class="badge bg-warning text-dark">IoT</span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex gap-2">
+                    <a href="/projects/irrigation-project.html" class="btn btn-info">Read More</a>
+                    <a href="https://github.com/Vinald/Agriwave_Smart_Irrigation_System" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <img src="/assets/images/wheelchair.jpg" class="card-img-top img-fluid rounded-3" alt="Voice-Controlled Wheelchair" style="height: 200px; object-fit: cover" />
+                <div class="card-body">
+                    <h3 class="card-title">Voice-Controlled Wheelchair System</h3>
+                    <p class="card-text">Engineered a Luganda Voice-Controlled Wheelchair System using MFCC and Mel-spectrogram features for speech intent recognition. Deployed on Raspberry Pi with Bluetooth mobile control support.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Python</span>
+                        <span class="badge bg-warning text-dark">Raspberry Pi</span>
+                        <span class="badge bg-warning text-dark">Speech Recognition</span>
+                        <span class="badge bg-warning text-dark">MFCC</span>
+                        <span class="badge bg-warning text-dark">Bluetooth</span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex gap-2">
+                    <a href="/projects/wheelchair-project.html" class="btn btn-info">Read More</a>
+                    <a href="https://github.com/Vinald/Luganda_voice-controlled_wheelchair_system" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <img src="/assets/images/ic_vxnaid_logo.png" class="card-img-top img-fluid rounded-3" alt="VXNAID System" style="height: 200px; object-fit: cover; background: white" />
+                <div class="card-body">
+                    <h3 class="card-title">VXNAID — Vaccine and Immunization Management</h3>
+                    <p class="card-text">Owned 15+ reports, led production deployment of the Luganda Call for Life IVR flow, released VxNAID v4 APK, and migrated staging to on-premise infrastructure. Deployed and trained health workers across multiple facilities.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Kotlin</span>
+                        <span class="badge bg-warning text-dark">Android</span>
+                        <span class="badge bg-warning text-dark">Java</span>
+                        <span class="badge bg-warning text-dark">OpenMRS</span>
+                        <span class="badge bg-warning text-dark">Asterisk</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex gap-2">
+                    <a href="https://github.com/Vinald/vxnaid" class="btn btn-info" target="_blank" rel="noopener">My Fork</a>
+                    <a href="https://github.com/ConnectForLife/vxnaid" class="btn btn-outline-light" target="_blank" rel="noopener">Upstream</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <img src="/assets/images/asterisk-generator.png" class="card-img-top img-fluid rounded-3" alt="Asterisk Audio Generator UI" style="height: 200px; object-fit: cover; object-position: top" />
+                <div class="card-body">
+                    <h3 class="card-title">Asterisk Audio Generator</h3>
+                    <p class="card-text">A web tool that converts text to Asterisk-compatible 8 kHz mono MP3 audio files using multiple TTS backends — Kokoro (local, 12 English voices), Sunbird AI (Luganda &amp; English), and Microsoft edge-tts (Swahili). Supports single-file and batch CSV generation with a live streaming progress feed.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Python</span>
+                        <span class="badge bg-warning text-dark">FastAPI</span>
+                        <span class="badge bg-warning text-dark">Kokoro TTS</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                        <span class="badge bg-warning text-dark">Asterisk</span>
+                        <span class="badge bg-warning text-dark">SSE</span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex gap-2">
+                    <a href="/projects/asterisk-audio-generator.html" class="btn btn-info">Read More</a>
+                    <a href="https://github.com/Vinald/Asterisk-Audio-Generator" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hidden: remaining 4 projects, shown via toggle -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-0" id="more-projects" style="display: none">
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-img-top d-flex align-items-center justify-content-center rounded-3" style="height: 200px; background: #1a1a2e">
+                    <div class="text-center text-light">
+                        <div style="font-size: 3rem">&#128722;</div>
+                        <div class="fw-bold mt-1">E-Commerce REST API</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">DRF E-Commerce API</h3>
+                    <p class="card-text">Production-grade e-commerce backend with product &amp; order management, JWT authentication, async email notifications via Celery &amp; Redis, performance monitoring with Django Silk, and 34+ comprehensive API tests. Fully containerized with Docker.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Django</span>
+                        <span class="badge bg-warning text-dark">DRF</span>
+                        <span class="badge bg-warning text-dark">Celery</span>
+                        <span class="badge bg-warning text-dark">Redis</span>
+                        <span class="badge bg-warning text-dark">PostgreSQL</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                        <span class="badge bg-warning text-dark">JWT</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/Vinald/drf-products-api" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-img-top d-flex align-items-center justify-content-center rounded-3" style="height: 200px; background: #0d2137">
+                    <div class="text-center text-light">
+                        <div style="font-size: 3rem">&#9992;</div>
+                        <div class="fw-bold mt-1">Travel Booking Platform</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Travello — Django Travel App</h3>
+                    <p class="card-text">Full-stack travel destination booking platform with user authentication, admin dashboard, async task processing via Celery &amp; Redis, Nginx reverse proxy, and comprehensive Pytest test coverage. Production-ready with Docker &amp; docker-compose.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Django</span>
+                        <span class="badge bg-warning text-dark">PostgreSQL</span>
+                        <span class="badge bg-warning text-dark">Celery</span>
+                        <span class="badge bg-warning text-dark">Redis</span>
+                        <span class="badge bg-warning text-dark">Nginx</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                        <span class="badge bg-warning text-dark">Pytest</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/Vinald/Travello_web_application" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-img-top d-flex align-items-center justify-content-center rounded-3" style="height: 200px; background: #0f2027">
+                    <div class="text-center text-light">
+                        <div style="font-size: 3rem">&#128172;</div>
+                        <div class="fw-bold mt-1">Real-time WebSocket Chat</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">ws_charts — WebSocket Chat App</h3>
+                    <p class="card-text">Multi-room real-time chat with auto-reconnect (exponential backoff), message delivery indicators, typing status, persistent message history, server heartbeat, and XSS prevention. Built with async FastAPI and persistent SQLite via SQLAlchemy.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">FastAPI</span>
+                        <span class="badge bg-warning text-dark">WebSockets</span>
+                        <span class="badge bg-warning text-dark">SQLAlchemy</span>
+                        <span class="badge bg-warning text-dark">Alembic</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                        <span class="badge bg-warning text-dark">Async Python</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/Vinald/ws_charts" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <div class="card-img-top d-flex align-items-center justify-content-center rounded-3" style="height: 200px; background: #162032">
+                    <div class="text-center text-light">
+                        <div style="font-size: 3rem">&#128230;</div>
+                        <div class="fw-bold mt-1">FastAPI + React Full-Stack</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">FastAPI Product Management</h3>
+                    <p class="card-text">Full-stack product management application with a FastAPI backend, React frontend, PostgreSQL database, Swagger UI documentation, and complete CRUD operations. Fully containerized — runs with a single docker-compose command.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">FastAPI</span>
+                        <span class="badge bg-warning text-dark">React</span>
+                        <span class="badge bg-warning text-dark">PostgreSQL</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                        <span class="badge bg-warning text-dark">Swagger</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/Vinald/FastAPI_Product_Management" class="btn btn-outline-light" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+        <button id="toggle-projects-btn" class="btn btn-warning rounded-pill px-4 fw-bold" onclick="toggleProjects()">
+            Show More Projects
+        </button>
+    </div>
+</section>
+
+<script>
+function toggleProjects() {
+    var more = document.getElementById('more-projects');
+    var btn = document.getElementById('toggle-projects-btn');
+    if (more.style.display === 'none' || more.style.display === '') {
+        more.style.display = 'flex';
+        btn.textContent = 'Show Less';
+        btn.classList.replace('btn-warning', 'btn-outline-warning');
+    } else {
+        more.style.display = 'none';
+        btn.textContent = 'Show More Projects (4)';
+        btn.classList.replace('btn-outline-warning', 'btn-warning');
+    }
+}
+</script>

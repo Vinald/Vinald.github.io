@@ -1,0 +1,12 @@
+title: Vinald - Software Developer Portfolio
+description: Portfolio of Okiror Samuel Vinald - Full-stack Software Developer
+url: "https://vinald.github.io"
+baseurl: ""
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - "*.sh"
