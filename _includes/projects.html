@@ -1,5 +1,7 @@
 <section id="projects" class="py-3 px-2 py-md-4 px-md-3">
     <h2 class="text-center mb-4 text-uppercase fw-bold">Projects</h2>
+
+    <!-- Visible: first 4 projects -->
     <div class="row row-cols-1 row-cols-md-2 g-4">
 
         <div class="col">
@@ -69,12 +71,7 @@
 
         <div class="col">
             <div class="card bg-dark text-light h-100">
-                <div class="card-img-top d-flex align-items-center justify-content-center bg-secondary rounded-3" style="height: 200px">
-                    <div class="text-center text-light">
-                        <div style="font-size: 3rem">&#127908;</div>
-                        <div class="fw-bold mt-1">TTS &rarr; Asterisk MP3</div>
-                    </div>
-                </div>
+                <img src="/assets/images/asterisk-generator.png" class="card-img-top img-fluid rounded-3" alt="Asterisk Audio Generator UI" style="height: 200px; object-fit: cover; object-position: top" />
                 <div class="card-body">
                     <h3 class="card-title">Asterisk Audio Generator</h3>
                     <p class="card-text">A web tool that converts text to Asterisk-compatible 8 kHz mono MP3 audio files using multiple TTS backends — Kokoro (local, 12 English voices), Sunbird AI (Luganda &amp; English), and Microsoft edge-tts (Swahili). Supports single-file and batch CSV generation with a live streaming progress feed.</p>
@@ -93,6 +90,11 @@
                 </div>
             </div>
         </div>
+
+    </div>
+
+    <!-- Hidden: remaining 4 projects, shown via toggle -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-0" id="more-projects" style="display: none">
 
         <div class="col">
             <div class="card bg-dark text-light h-100">
@@ -200,4 +202,26 @@
         </div>
 
     </div>
+
+    <div class="text-center mt-4">
+        <button id="toggle-projects-btn" class="btn btn-warning rounded-pill px-4 fw-bold" onclick="toggleProjects()">
+            Show More Projects
+        </button>
+    </div>
 </section>
+
+<script>
+function toggleProjects() {
+    var more = document.getElementById('more-projects');
+    var btn = document.getElementById('toggle-projects-btn');
+    if (more.style.display === 'none' || more.style.display === '') {
+        more.style.display = 'flex';
+        btn.textContent = 'Show Less';
+        btn.classList.replace('btn-warning', 'btn-outline-warning');
+    } else {
+        more.style.display = 'none';
+        btn.textContent = 'Show More Projects (4)';
+        btn.classList.replace('btn-outline-warning', 'btn-warning');
+    }
+}
+</script>
