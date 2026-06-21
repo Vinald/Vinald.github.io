@@ -10,3 +10,5 @@ exclude:
   - README.md
   - LICENSE
   - "*.sh"
+  - scripts/
+  - vercel.json
