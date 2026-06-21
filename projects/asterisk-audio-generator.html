@@ -1,229 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Asterisk Audio Generator - Project Portfolio</title>
-        <link rel="icon" href="../assets/images/white.png" type="image/x-icon" />
+---
+layout: project
+title: "Asterisk Audio Generator - Project Portfolio"
+github_url: "https://github.com/Vinald/Asterisk-Audio-Generator"
+---
 
-        <!-- Bootstrap CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-        />
+<h1 class="text-center my-4">ASTERISK AUDIO GENERATOR</h1>
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="../assets/css/styles.css" />
-    </head>
-    <body>
-        <!-- Navigation Section -->
-        <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="../index.html">OKIROR SAMUEL VINALD</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a href="../index.html" class="nav-link">Main Page</a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://github.com/Vinald/Asterisk-Audio-Generator"
-                                class="btn btn-info"
-                                target="_blank"
-                                rel="noopener"
-                                >GitHub</a
-                            >
-                        </li>
-                    </ul>
-                </div>
+<h2 class="text-warning">Project Summary</h2>
+<p class="lead">
+    The Asterisk Audio Generator is a web-based tool that converts text to Asterisk-compatible
+    <strong>8 kHz mono MP3</strong> audio files — the exact format required by Asterisk PBX systems
+    for IVR prompts, voicemail, and telephony applications. It supports multiple TTS
+    (text-to-speech) backends selectable per request, enabling English, Luganda, and Swahili voice
+    generation from a single interface, with both single-file and bulk batch workflows.
+</p>
+
+<h2 class="text-warning">Objective</h2>
+<p class="lead">
+    Producing Asterisk-ready audio traditionally requires manual recording studios or complex audio
+    processing pipelines. This tool eliminates that friction by combining modern neural TTS engines
+    with automatic audio resampling, delivering production-ready MP3 files in seconds. It is built
+    to serve telecom engineers, IVR developers, and anyone building voice-driven applications on
+    Asterisk.
+</p>
+
+<h2 class="text-warning">Supported Languages &amp; Voices</h2>
+<p class="lead">Three TTS backends are integrated, each selectable per generation request:</p>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">English — Kokoro TTS</div>
+            <div class="card-body">
+                <p class="card-text">Local neural model — no internet connection or API key required. Includes 12 US and GB voices (male and female).</p>
+                <ul class="small">
+                    <li>Heart, Bella, Sarah, Nicole, Jessica (US female)</li>
+                    <li>Adam, Michael, Liam (US male)</li>
+                    <li>Emma, Isabella (GB female)</li>
+                    <li>George, Lewis (GB male)</li>
+                </ul>
             </div>
-        </nav>
-
-        <div class="container text-light">
-            <h1 class="text-center my-4">ASTERISK AUDIO GENERATOR</h1>
-
-            <h2 class="text-warning">Project Summary</h2>
-            <p class="lead">
-                The Asterisk Audio Generator is a web-based tool that converts text to
-                Asterisk-compatible <strong>8 kHz mono MP3</strong> audio files — the exact format
-                required by Asterisk PBX systems for IVR prompts, voicemail, and telephony
-                applications. It supports multiple TTS (text-to-speech) backends selectable per
-                request, enabling English, Luganda, and Swahili voice generation from a single
-                interface, with both single-file and bulk batch workflows.
-            </p>
-
-            <h2 class="text-warning">Objective</h2>
-            <p class="lead">
-                Producing Asterisk-ready audio traditionally requires manual recording studios or
-                complex audio processing pipelines. This tool eliminates that friction by combining
-                modern neural TTS engines with automatic audio resampling, delivering production-ready
-                MP3 files in seconds. It is built to serve telecom engineers, IVR developers, and
-                anyone building voice-driven applications on Asterisk.
-            </p>
-
-            <h2 class="text-warning">Supported Languages &amp; Voices</h2>
-            <p class="lead">
-                Three TTS backends are integrated, each selectable per generation request:
-            </p>
-
-            <div class="row g-3 mb-4">
-                <div class="col-md-4">
-                    <div class="card bg-secondary text-light h-100">
-                        <div class="card-header text-warning fw-bold">English — Kokoro TTS</div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                Local neural model — no internet connection or API key required.
-                                Includes 12 US and GB voices (male and female).
-                            </p>
-                            <ul class="small">
-                                <li>Heart, Bella, Sarah, Nicole, Jessica (US female)</li>
-                                <li>Adam, Michael, Liam (US male)</li>
-                                <li>Emma, Isabella (GB female)</li>
-                                <li>George, Lewis (GB male)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-secondary text-light h-100">
-                        <div class="card-header text-warning fw-bold">Luganda &amp; English — Sunbird AI</div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                Cloud-based TTS powered by Sunbird AI, supporting both English and
-                                Luganda — one of the few TTS providers offering Luganda voice
-                                synthesis. Requires a free Sunbird API token.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-secondary text-light h-100">
-                        <div class="card-header text-warning fw-bold">Swahili — edge-tts</div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                Microsoft Neural cloud TTS with no API key required. Includes 4
-                                Swahili voices covering both Kenya and Tanzania dialects (male and
-                                female).
-                            </p>
-                            <ul class="small">
-                                <li>Zuri — KE female</li>
-                                <li>Rafiki — KE male</li>
-                                <li>Rehema — TZ female</li>
-                                <li>Daudi — TZ male</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="text-warning">Key Features</h2>
-
-            <h3 class="text-primary">Single File Generation</h3>
-            <p class="lead">
-                Select a language and voice, type the text, set a filename and playback speed
-                (0.5&times; to 2.0&times;), then click Generate. The output MP3 appears in the
-                file list instantly and can be downloaded or deleted directly from the UI.
-            </p>
-
-            <h3 class="text-primary">Batch CSV Processing</h3>
-            <p class="lead">
-                Upload a CSV file with <code>text</code> and <code>filename</code> columns to
-                generate hundreds of audio files in one operation. A live progress feed powered by
-                Server-Sent Events shows each file completing in real time, with per-row error
-                reporting that does not stop the batch. Limits: 500 rows, 2 MB file size, 5,000
-                characters per text cell.
-            </p>
-
-            <h3 class="text-primary">Docker Support</h3>
-            <p class="lead">
-                A <code>Dockerfile</code> and <code>docker-compose.yml</code> are included for
-                one-command deployment. The containerised build bundles all dependencies including
-                sox, Python packages, and the Kokoro model files.
-            </p>
-
-            <h2 class="text-warning">How Audio Is Produced</h2>
-            <p class="lead">
-                Regardless of the TTS backend, all audio passes through the same post-processing
-                pipeline to guarantee Asterisk compatibility:
-            </p>
-            <ol class="lead">
-                <li>Text is sent to the selected TTS backend (Kokoro, Sunbird, or edge-tts).</li>
-                <li>Raw audio is returned as PCM WAV or MP3 at the source sample rate.</li>
-                <li>
-                    <code>sox</code> resamples the audio to <strong>8,000 Hz mono</strong> and
-                    re-encodes it as MP3.
-                </li>
-                <li>The final file is saved to <code>media/</code> and served via the FastAPI app.</li>
-            </ol>
-
-            <h2 class="text-warning">Tech Stack</h2>
-            <div class="row g-3 mb-4">
-                <div class="col-md-6">
-                    <div class="card bg-secondary text-light">
-                        <div class="card-body">
-                            <h5 class="card-title text-info">Backend</h5>
-                            <ul class="mb-0">
-                                <li>Python 3.10+ with FastAPI</li>
-                                <li>Kokoro TTS (ONNX local model)</li>
-                                <li>Sunbird AI REST API</li>
-                                <li>Microsoft edge-tts (neural cloud)</li>
-                                <li>sox for audio resampling and MP3 encoding</li>
-                                <li>Server-Sent Events for streaming batch progress</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card bg-secondary text-light">
-                        <div class="card-body">
-                            <h5 class="card-title text-info">Frontend &amp; Deployment</h5>
-                            <ul class="mb-0">
-                                <li>Single-page HTML/JS UI (Single + Batch CSV tabs)</li>
-                                <li>Bootstrap 5 for responsive layout</li>
-                                <li>Docker &amp; docker-compose for containerised deployment</li>
-                                <li>Uvicorn ASGI server</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <h2 class="text-warning">REST API</h2>
-            <p class="lead">
-                The tool exposes a clean REST API for programmatic integration:
-            </p>
-            <ul class="lead">
-                <li><code>GET /speakers</code> — full voice roster as JSON</li>
-                <li><code>POST /generate</code> — generate a single MP3 file</li>
-                <li><code>POST /batch</code> — generate multiple MP3s from a CSV, streamed as SSE events</li>
-                <li><code>GET /files</code> — list all generated files</li>
-                <li><code>DELETE /files/{"{filename}"}</code> — delete a file</li>
-                <li><code>GET /health</code> — health check</li>
-            </ul>
         </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">Luganda &amp; English — Sunbird AI</div>
+            <div class="card-body">
+                <p class="card-text">Cloud-based TTS powered by Sunbird AI, supporting both English and Luganda — one of the few TTS providers offering Luganda voice synthesis. Requires a free Sunbird API token.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">Swahili — edge-tts</div>
+            <div class="card-body">
+                <p class="card-text">Microsoft Neural cloud TTS with no API key required. Includes 4 Swahili voices covering both Kenya and Tanzania dialects (male and female).</p>
+                <ul class="small">
+                    <li>Zuri — KE female</li>
+                    <li>Rafiki — KE male</li>
+                    <li>Rehema — TZ female</li>
+                    <li>Daudi — TZ male</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <!-- Footer -->
-        <footer class="bg-dark text-light text-center py-2">
-            <p>&copy; <span id="currentYear"></span> Okiror Samuel Vinald</p>
-        </footer>
+<h2 class="text-warning">Key Features</h2>
 
-        <!-- current year script -->
-        <script>
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-        </script>
+<h3 class="text-primary">Single File Generation</h3>
+<p class="lead">
+    Select a language and voice, type the text, set a filename and playback speed (0.5&times; to
+    2.0&times;), then click Generate. The output MP3 appears in the file list instantly and can be
+    downloaded or deleted directly from the UI.
+</p>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
-</html>
+<h3 class="text-primary">Batch CSV Processing</h3>
+<p class="lead">
+    Upload a CSV file with <code>text</code> and <code>filename</code> columns to generate hundreds
+    of audio files in one operation. A live progress feed powered by Server-Sent Events shows each
+    file completing in real time, with per-row error reporting that does not stop the batch. Limits:
+    500 rows, 2 MB file size, 5,000 characters per text cell.
+</p>
+
+<h3 class="text-primary">Docker Support</h3>
+<p class="lead">
+    A <code>Dockerfile</code> and <code>docker-compose.yml</code> are included for one-command
+    deployment. The containerised build bundles all dependencies including sox, Python packages,
+    and the Kokoro model files.
+</p>
+
+<h2 class="text-warning">How Audio Is Produced</h2>
+<p class="lead">Regardless of the TTS backend, all audio passes through the same post-processing pipeline to guarantee Asterisk compatibility:</p>
+<ol class="lead">
+    <li>Text is sent to the selected TTS backend (Kokoro, Sunbird, or edge-tts).</li>
+    <li>Raw audio is returned as PCM WAV or MP3 at the source sample rate.</li>
+    <li><code>sox</code> resamples the audio to <strong>8,000 Hz mono</strong> and re-encodes it as MP3.</li>
+    <li>The final file is saved to <code>media/</code> and served via the FastAPI app.</li>
+</ol>
+
+<h2 class="text-warning">Tech Stack</h2>
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card bg-secondary text-light">
+            <div class="card-body">
+                <h5 class="card-title text-info">Backend</h5>
+                <ul class="mb-0">
+                    <li>Python 3.10+ with FastAPI</li>
+                    <li>Kokoro TTS (ONNX local model)</li>
+                    <li>Sunbird AI REST API</li>
+                    <li>Microsoft edge-tts (neural cloud)</li>
+                    <li>sox for audio resampling and MP3 encoding</li>
+                    <li>Server-Sent Events for streaming batch progress</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card bg-secondary text-light">
+            <div class="card-body">
+                <h5 class="card-title text-info">Frontend &amp; Deployment</h5>
+                <ul class="mb-0">
+                    <li>Single-page HTML/JS UI (Single + Batch CSV tabs)</li>
+                    <li>Bootstrap 5 for responsive layout</li>
+                    <li>Docker &amp; docker-compose for containerised deployment</li>
+                    <li>Uvicorn ASGI server</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-warning">REST API</h2>
+<p class="lead">The tool exposes a clean REST API for programmatic integration:</p>
+<ul class="lead">
+    <li><code>GET /speakers</code> — full voice roster as JSON</li>
+    <li><code>POST /generate</code> — generate a single MP3 file</li>
+    <li><code>POST /batch</code> — generate multiple MP3s from a CSV, streamed as SSE events</li>
+    <li><code>GET /files</code> — list all generated files</li>
+    <li><code>DELETE /files/{filename}</code> — delete a file</li>
+    <li><code>GET /health</code> — health check</li>
+</ul>

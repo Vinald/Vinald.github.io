@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ page.title | default: "Vinald - Software Developer Portfolio" }}</title>
+        <meta name="description" content="Portfolio of Okiror Samuel Vinald - Full-stack Software Developer specializing in Java, Python, JavaScript, Android Development, and Backend Systems." />
+        <meta name="keywords" content="Software Developer, Java, Python, JavaScript, React, Django, SpringBoot, Android Development, Full-Stack Developer, Computer Engineer" />
+        <meta name="author" content="Okiror Samuel Vinald" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Okiror Samuel Vinald - Software Developer Portfolio" />
+        <meta property="og:description" content="Full-stack Software Developer with expertise in Java, Python, JavaScript, and mobile development." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vinald.github.io" />
+        <meta property="og:image" content="https://vinald.github.io/assets/images/profile_new_1.jpg" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Okiror Samuel Vinald - Software Developer" />
+        <meta name="twitter:description" content="Full-stack Software Developer | Java | Python | TypeScript | APIs | Backend" />
+        <meta name="twitter:image" content="https://vinald.github.io/assets/images/profile_new_1.jpg" />
+
+        <link rel="icon" href="/assets/images/white.png" type="image/x-icon" />
+        <link rel="canonical" href="https://vinald.github.io" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="/">
+                    <img src="/assets/images/black.png" alt="Vinald Logo" height="35" class="d-inline-block align-text-top me-2" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#intro">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {{ content }}
+
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+        <footer class="bg-dark text-light text-center py-2">
+            <p>&copy; <span id="currentYear"></span> Okiror Samuel Vinald</p>
+        </footer>
+
+        <script>document.getElementById("currentYear").textContent = new Date().getFullYear();</script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="/assets/js/emailjs-config.js"></script>
+        <script src="/assets/js/script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                initializeEmailJS();
+            });
+        </script>
+    </body>
+</html>
