@@ -1,0 +1,196 @@
+---
+layout: project
+title: "Asterisk Audio & Transcription - Project Portfolio"
+github_url: "https://github.com/Vinald/Asterisk-Audio-Transcription"
+---
+
+<h1 class="text-center my-4">ASTERISK AUDIO &amp; TRANSCRIPTION</h1>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <img src="/assets/images/asterisk-filled.png" class="img-fluid rounded shadow" alt="Asterisk Audio & Transcription - Single tab with IVR prompt filled in" />
+        <p class="text-center text-muted small mt-1">Single file generation - IVR prompt ready to convert</p>
+    </div>
+    <div class="col-md-6">
+        <img src="/assets/images/asterisk-batch.png" class="img-fluid rounded shadow" alt="Asterisk Audio & Transcription - Batch CSV tab" />
+        <p class="text-center text-muted small mt-1">Batch CSV tab - generate hundreds of MP3s from a spreadsheet</p>
+    </div>
+</div>
+
+<h2 class="text-warning">Project Summary</h2>
+<p class="lead">
+    Asterisk Audio &amp; Transcription is a web-based tool for both <strong>text-to-speech</strong> -
+    producing Asterisk-compatible <strong>8 kHz mono MP3</strong> audio from text - and
+    <strong>speech-to-text</strong> - transcribing audio files back into text. Every backend, for
+    either direction, is selectable per request, enabling English, Luganda, Swahili, and a wide
+    range of African languages from a single interface, with single-file, batch, and transcription
+    workflows.
+</p>
+
+<h2 class="text-warning">Objective</h2>
+<p class="lead">
+    Producing Asterisk-ready audio traditionally requires manual recording studios or complex audio
+    processing pipelines, and reviewing recorded calls requires manual listening. This tool removes
+    both bottlenecks by combining modern neural TTS and STT engines with automatic audio
+    resampling, delivering production-ready MP3 files and accurate transcripts in seconds. It is
+    built to serve telecom engineers, IVR developers, and anyone building or auditing voice-driven
+    applications on Asterisk.
+</p>
+
+<h2 class="text-warning">Text-to-Speech - Supported Languages &amp; Voices</h2>
+<p class="lead">Three TTS backends are integrated, each selectable per generation request:</p>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">English - Kokoro TTS</div>
+            <div class="card-body">
+                <p class="card-text">Local neural model - no internet connection or API key required. Includes 12 US and GB voices (male and female).</p>
+                <ul class="small">
+                    <li>Heart, Bella, Sarah, Nicole, Jessica (US female)</li>
+                    <li>Adam, Michael, Liam (US male)</li>
+                    <li>Emma, Isabella (GB female)</li>
+                    <li>George, Lewis (GB male)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">17 African Languages - Sunbird AI</div>
+            <div class="card-body">
+                <p class="card-text">Cloud-based TTS powered by Sunbird AI: 48 speakers across English, Luganda, Swahili, Acholi, Afrikaans, Ateso, Ewe, Fulani, Hausa, Igbo, Kikuyu, Kinyarwanda, Lingala, Luo, Runyankole, Xhosa, and Yoruba. Requires a free Sunbird API token.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">Swahili - edge-tts</div>
+            <div class="card-body">
+                <p class="card-text">Microsoft Neural cloud TTS with no API key required. Includes 4 Swahili voices covering both Kenya and Tanzania dialects (male and female).</p>
+                <ul class="small">
+                    <li>Zuri - KE female</li>
+                    <li>Rafiki - KE male</li>
+                    <li>Rehema - TZ female</li>
+                    <li>Daudi - TZ male</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-warning">Speech-to-Text - Transcription Backends</h2>
+<p class="lead">Three STT backends are integrated, each selectable per transcription request:</p>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">Sunbird AI</div>
+            <div class="card-body">
+                <p class="card-text">Cloud STT covering 51 African languages, including Luganda, Swahili, Acholi, and Runyankole. Reuses the same <code>AUTH_TOKEN</code> as Sunbird TTS.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">faster-whisper</div>
+            <div class="card-body">
+                <p class="card-text">Local model covering ~90 languages with auto-detect - no API key required. Downloads and caches automatically on first use.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-secondary text-light h-100">
+            <div class="card-header text-warning fw-bold">OpenAI Whisper API</div>
+            <div class="card-body">
+                <p class="card-text">Cloud transcription across ~90 languages with auto-detect. Requires an <code>OPENAI_API_KEY</code>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-warning">Key Features</h2>
+
+<h3 class="text-primary">Single File Generation</h3>
+<p class="lead">
+    Select a language and voice, type the text, set a filename and playback speed (0.5&times; to
+    2.0&times;), then click Generate. The output MP3 appears in the file list instantly and can be
+    downloaded or deleted directly from the UI.
+</p>
+
+<h3 class="text-primary">Batch CSV Processing</h3>
+<p class="lead">
+    Upload a CSV file with <code>text</code> and <code>filename</code> columns to generate hundreds
+    of audio files in one operation. A live progress feed powered by Server-Sent Events shows each
+    file completing in real time, with per-row error reporting that does not stop the batch. Limits:
+    500 rows, 2 MB file size, 5,000 characters per text cell.
+</p>
+
+<h3 class="text-primary">Transcription</h3>
+<p class="lead">
+    Pick a backend and spoken language (or auto-detect on the Whisper backends), upload an audio
+    file - wav, mp3, m4a, ogg, flac, or webm up to 25 MB - and optionally request per-segment
+    timestamps. The transcript is returned with one-click copy and save-as-.txt actions.
+</p>
+
+<h3 class="text-primary">Docker Support</h3>
+<p class="lead">
+    A <code>Dockerfile</code> and <code>docker-compose.yml</code> are included for one-command
+    deployment, and multi-arch (<code>amd64</code>/<code>arm64</code>) images are published to
+    GHCR on every release for a build-free deploy.
+</p>
+
+<h2 class="text-warning">How Audio Is Produced</h2>
+<p class="lead">Regardless of the TTS backend, all generated audio passes through the same post-processing pipeline to guarantee Asterisk compatibility:</p>
+<ol class="lead">
+    <li>Text is sent to the selected TTS backend (Kokoro, Sunbird, or edge-tts).</li>
+    <li>Raw audio is returned as PCM WAV or MP3 at the source sample rate.</li>
+    <li><code>sox</code> resamples the audio to <strong>8,000 Hz mono</strong> and re-encodes it as MP3.</li>
+    <li>The final file is saved to <code>media/</code> and served via the FastAPI app.</li>
+</ol>
+
+<h2 class="text-warning">Tech Stack</h2>
+<div class="row g-3 mb-4">
+    <div class="col-md-6">
+        <div class="card bg-secondary text-light">
+            <div class="card-body">
+                <h5 class="card-title text-info">Backend</h5>
+                <ul class="mb-0">
+                    <li>Python 3.10+ with FastAPI</li>
+                    <li>Kokoro TTS (ONNX local model)</li>
+                    <li>Sunbird AI REST API (TTS &amp; STT)</li>
+                    <li>Microsoft edge-tts (neural cloud)</li>
+                    <li>faster-whisper &amp; OpenAI Whisper API (STT)</li>
+                    <li>sox for audio resampling and MP3 encoding</li>
+                    <li>Server-Sent Events for streaming batch progress</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card bg-secondary text-light">
+            <div class="card-body">
+                <h5 class="card-title text-info">Frontend &amp; Deployment</h5>
+                <ul class="mb-0">
+                    <li>Single-page HTML/JS UI (Single, Batch CSV &amp; Transcribe tabs)</li>
+                    <li>Bootstrap 5 for responsive layout</li>
+                    <li>Docker &amp; docker-compose, with prebuilt GHCR images</li>
+                    <li>Uvicorn ASGI server</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-warning">REST API</h2>
+<p class="lead">The tool exposes a clean REST API for programmatic integration:</p>
+<ul class="lead">
+    <li><code>GET /speakers</code> - full TTS voice roster as JSON</li>
+    <li><code>POST /generate</code> - generate a single MP3 file</li>
+    <li><code>POST /batch</code> - generate multiple MP3s from a CSV, streamed as SSE events</li>
+    <li><code>GET /stt-backends</code> - STT backend roster and supported languages</li>
+    <li><code>POST /transcribe</code> - transcribe an uploaded audio file</li>
+    <li><code>GET /files</code> - list all generated files</li>
+    <li><code>DELETE /files/{filename}</code> - delete a file</li>
+    <li><code>GET /health</code> - health check</li>
+</ul>

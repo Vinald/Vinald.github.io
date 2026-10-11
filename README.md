@@ -1,4 +1,4 @@
-# Okiror Samuel Vinald — Portfolio
+# Okiror Samuel Vinald - Portfolio
 
 Personal portfolio site for **Okiror Samuel Vinald**, a Software Developer and Computer Engineer.
 Live at: [vinald.github.io](https://vinald.github.io)
@@ -43,13 +43,13 @@ Live at: [vinald.github.io](https://vinald.github.io)
 ├── projects/                   # Project detail pages (use layout: project)
 │   ├── irrigation-project.html
 │   ├── wheelchair-project.html
-│   └── asterisk-audio-generator.html
+│   └── asterisk-audio-transcription.html
 │
 ├── assets/
 │   ├── css/styles.css          # Custom styles and animations
 │   ├── js/
 │   │   ├── script.js           # Scroll animations, navbar, copy-to-clipboard, EmailJS handler
-│   │   └── emailjs-config.js   # Injected at build time — do not edit manually
+│   │   └── emailjs-config.js   # Injected at build time - do not edit manually
 │   ├── images/                 # Profile photo, project screenshots, logos
 │   ├── certificates/           # PDF certificates
 │   └── okiror_samuel_vinald.pdf  # Resume download
@@ -94,7 +94,7 @@ The `project` layout provides the navbar (with logo, Portfolio link, All Project
 
 ## Running Locally
 
-Requires Ruby (Homebrew recommended on macOS — system Ruby 2.6 lacks write permissions).
+Requires Ruby (Homebrew recommended on macOS - system Ruby 2.6 lacks write permissions).
 
 ```bash
 # First time
@@ -127,8 +127,8 @@ Required repository secrets: `EMAILJS_PUBLIC_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJ
 |---|---|---|
 | Smart Irrigation System | Python, TensorFlow, Flask, Firebase, ESP32 | `projects/irrigation-project.html` |
 | Voice-Controlled Wheelchair | Python, Raspberry Pi, MFCC, Bluetooth | `projects/wheelchair-project.html` |
-| VXNAID — Vaccine Management | Kotlin, Android, OpenMRS, Asterisk, Docker | GitHub (fork + upstream) |
-| Asterisk Audio Generator | Python, FastAPI, Kokoro TTS, Docker, SSE | `projects/asterisk-audio-generator.html` |
+| VXNAID - Vaccine Management | Kotlin, Android, OpenMRS, Asterisk, Docker | GitHub (fork + upstream) |
+| Asterisk Audio & Transcription | Python, FastAPI, Kokoro TTS, faster-whisper, Docker | `projects/asterisk-audio-transcription.html` |
 | DRF E-Commerce API | Django, DRF, Celery, Redis, PostgreSQL, Docker | GitHub |
 | Travello Django Travel App | Django, PostgreSQL, Celery, Redis, Nginx, Pytest | GitHub |
 | ws_charts WebSocket Chat | FastAPI, WebSockets, SQLAlchemy, Alembic, Docker | GitHub |
