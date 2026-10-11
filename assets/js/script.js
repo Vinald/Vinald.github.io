@@ -170,16 +170,17 @@ function initializeEmailJS() {
     const templateId = window.EMAILJS_TEMPLATE_ID;
 
     // Detect placeholder values or missing credentials
-    const isPlaceholder = (v) => !v || v.startsWith('YOUR_');
+    const placeholders = ['PUBLIC_KEY', 'SERVICE_ID', 'TEMPLATE_ID'];
+    const isPlaceholder = (v) => !v || v.startsWith('YOUR_') || placeholders.includes(v);
 
     if (isPlaceholder(publicKey) || isPlaceholder(serviceId) || isPlaceholder(templateId)) {
-        console.warn('⚠️ EmailJS credentials missing or placeholder — using fallback.');
+        console.warn('⚠️ EmailJS credentials missing or placeholder - using fallback.');
         setupFallbackEmailForm();
         return;
     }
 
     if (typeof emailjs === 'undefined') {
-        console.warn('⚠️ EmailJS library not available — using fallback.');
+        console.warn('⚠️ EmailJS library not available - using fallback.');
         setupFallbackEmailForm();
         return;
     }
@@ -313,6 +314,81 @@ function setupFallbackEmailForm() {
         });
     }
 }
+
+// Scroll Ruler - decorative scroll-position indicator with section labels
+(function () {
+    const ruler = document.getElementById('scrollRuler');
+    if (!ruler) return;
+
+    const fill = document.getElementById('scrollRulerFill');
+    const ticksEl = document.getElementById('scrollRulerTicks');
+    const percentEl = document.getElementById('scrollRulerPercent');
+    const labelsEl = document.getElementById('scrollRulerLabels');
+    const labelSpans = labelsEl ? Array.from(labelsEl.querySelectorAll('[data-target]')) : [];
+
+    // Build tick marks every 10%, major ticks at 0/50/100
+    for (let p = 0; p <= 100; p += 10) {
+        const tick = document.createElement('div');
+        tick.className = 'scroll-ruler-tick' + (p === 0 || p === 50 || p === 100 ? ' major' : '');
+        tick.style.top = p + '%';
+        if (p === 0 || p === 50 || p === 100) {
+            const label = document.createElement('span');
+            label.className = 'scroll-ruler-tick-label';
+            label.textContent = p;
+            tick.appendChild(label);
+        }
+        ticksEl.appendChild(tick);
+    }
+
+    function docScrollable() {
+        return document.documentElement.scrollHeight - window.innerHeight;
+    }
+
+    function positionLabels() {
+        // Evenly spaced along the ruler (not proportional to section height) so
+        // longer vertical mono labels never overlap regardless of section length.
+        const margin = 3;
+        const span = 100 - margin * 2;
+        const count = labelSpans.length;
+        labelSpans.forEach(function (el, i) {
+            const pct = count > 1 ? margin + (span * i) / (count - 1) : 50;
+            el.style.top = pct + '%';
+        });
+    }
+
+    function update() {
+        const scrollable = docScrollable();
+        const pct = scrollable > 0 ? Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100)) : 0;
+        fill.style.height = pct + '%';
+        percentEl.textContent = String(Math.round(pct)).padStart(3, '0') + '%';
+
+        const scrollPos = window.scrollY + window.innerHeight * 0.3;
+        let current = null;
+        labelSpans.forEach(function (span) {
+            const target = document.querySelector(span.getAttribute('data-target'));
+            if (target && target.offsetTop <= scrollPos) current = span;
+        });
+        labelSpans.forEach(function (span) { span.classList.toggle('active', span === current); });
+    }
+
+    let ticking = false;
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                update();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    window.addEventListener('resize', function () {
+        positionLabels();
+        update();
+    });
+
+    positionLabels();
+    update();
+})();
 
 // Lazy Loading for Images
 if ('IntersectionObserver' in window) {
