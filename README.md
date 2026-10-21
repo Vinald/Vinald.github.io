@@ -135,3 +135,4 @@ Required repository secrets: `EMAILJS_PUBLIC_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJ
 | FastAPI Product Management | FastAPI, React, PostgreSQL, Docker, Swagger | GitHub |
 | Local Service Template | Next.js, TypeScript, Tailwind CSS, Docker | Private repo |
 | Freelancer Template | Next.js, TypeScript, Tailwind CSS, Docker | Private repo |
+| Ecommerce Template | Next.js, TypeScript, Tailwind CSS, Stripe, Docker | Private repo |
