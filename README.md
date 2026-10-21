@@ -133,4 +133,4 @@ Required repository secrets: `EMAILJS_PUBLIC_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJ
 | Travello Django Travel App | Django, PostgreSQL, Celery, Redis, Nginx, Pytest | GitHub |
 | ws_charts WebSocket Chat | FastAPI, WebSockets, SQLAlchemy, Alembic, Docker | GitHub |
 | FastAPI Product Management | FastAPI, React, PostgreSQL, Docker, Swagger | GitHub |
-| Local Service Template | Next.js, TypeScript, Tailwind CSS, Docker | GitHub |
+| Local Service Template | Next.js, TypeScript, Tailwind CSS, Docker | Private repo |
