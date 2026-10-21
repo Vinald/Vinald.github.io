@@ -359,6 +359,27 @@
 
     </div>
 
+
+        <div class="col">
+            <div class="card bg-dark text-light h-100">
+                <img src="/assets/images/saas-landing-template.jpg" class="card-img-top img-fluid rounded-3" alt="SaaS Landing Template - Flowpilot demo landing page" style="height: 200px; object-fit: cover; object-position: top" />
+                <div class="card-body">
+                    <h3 class="card-title">SaaS Landing Template</h3>
+                    <p class="card-text">White-label landing page template for small startups and SaaS products. Built with Next.js, TypeScript and Tailwind, with a reusable section library (hero, feature grid, pricing table, FAQ, waitlist form) backed by Sanity CMS. The waitlist form writes signups directly into Sanity. Dockerized for one-command deployment.</p>
+                    <div class="d-flex flex-wrap gap-1 mt-2">
+                        <span class="badge bg-warning text-dark">Next.js</span>
+                        <span class="badge bg-warning text-dark">TypeScript</span>
+                        <span class="badge bg-warning text-dark">Tailwind CSS</span>
+                        <span class="badge bg-warning text-dark">Sanity</span>
+                        <span class="badge bg-warning text-dark">Docker</span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="text-muted small">Private repo, client-ready template</span>
+                </div>
+            </div>
+        </div>
+
     <div class="text-center mt-4">
         <button id="toggle-projects-btn" class="btn btn-warning rounded-pill px-4 fw-bold" onclick="toggleProjects()">
             Show More Projects
@@ -376,7 +397,7 @@ function toggleProjects() {
         btn.classList.replace('btn-warning', 'btn-outline-warning');
     } else {
         more.style.display = 'none';
-        btn.textContent = 'Show More Projects (11)';
+        btn.textContent = 'Show More Projects (12)';
         btn.classList.replace('btn-outline-warning', 'btn-warning');
     }
 }
