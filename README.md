@@ -65,7 +65,7 @@ Live at: [vinald.github.io](https://vinald.github.io)
 | Section | Include file | Notes |
 |---|---|---|
 | Hero / About | `hero.html` | Intro paragraph, profile photo, contact cards |
-| Projects | `projects.html` | 10 cards; first 4 visible, 6 more behind "Show More" toggle |
+| Projects | `projects.html` | 16 cards; first 4 visible, 12 more behind "Show More" toggle |
 | Experience | `experience.html` | 7 roles, chronological reverse order |
 | Skills | `skills.html` | 9 skill-group cards + soft skills |
 | Areas of Focus | `services.html` | 7 specialization cards |
@@ -136,3 +136,4 @@ Required repository secrets: `EMAILJS_PUBLIC_KEY`, `EMAILJS_SERVICE_ID`, `EMAILJ
 | Local Service Template | Next.js, TypeScript, Tailwind CSS, Docker | Private repo |
 | Freelancer Template | Next.js, TypeScript, Tailwind CSS, Docker | Private repo |
 | Ecommerce Template | Next.js, TypeScript, Tailwind CSS, Stripe, Docker | Private repo |
+| SaaS Landing Template | Next.js, TypeScript, Tailwind CSS, Sanity, Docker | Private repo |
