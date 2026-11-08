@@ -9,16 +9,30 @@ I'm Okiror Samuel Vinald - a Computer Engineer and Software Developer based in U
 
 ## What I actually do day to day
 
-My core stack is **Python** (Django, FastAPI), **Java/Kotlin** (Spring Boot, Android), and **TypeScript/React**, deployed on Linux servers with Docker and GitHub Actions CI/CD. But the thing that sets my work apart from most backend/mobile developers is a hands-on specialty in **IVR and PBX systems built on Asterisk** - a domain most developers never touch.
+My core stack is **Python** (Django, FastAPI), **Java/Kotlin** (Spring Boot, Android), **TypeScript/React**, and **Flutter**, deployed on Linux servers with Docker and GitHub Actions CI/CD. But the thing that sets my work apart from most backend/mobile developers is a hands-on specialty in **IVR and PBX systems built on Asterisk**.
 
-Over the past year on the VxNAID project (a vaccine and immunization management system), I've gone from supporting features to owning pieces of the system end-to-end:
+Over the past year on the OpenMRS projects like VXNAID project (a vaccine and immunization management system), I have gone from supporting features to owning pieces of the system end-to-end:
 
 - Led the production deployment of the **Call for Life (CFL) Visit Reminder call flow**, including Luganda-language support - patients get automated, local-language reminders about upcoming vaccination visits.
 - Shipped **15+ reports** across a national reporting suite - vaccine tracking, visit history, missed visits, HMIS105, district and facility-level reporting - while fixing production bugs in sync and data accuracy along the way.
-- Released **VxNAID v4** (the Android app), adding landscape/portrait support, call language preference, and child health registration.
+- Released **VXNAID** (the Android app), adding landscape/portrait support, call language preference, and child health registration.
 - Migrated our staging environment to on-premise infrastructure and built a production-replica environment, specifically to de-risk future deployments.
 - Built IVR/AGI call flows and worked on PBX setup for an internal conversational AI agent.
 - Designed and built a GitHub Pages documentation platform that's now the team's reference point for SOPs and deployment guides.
+
+Roughly, a visit reminder call flow looks like this:
+
+<div class="mermaid">
+flowchart LR
+    A[Visit due soon] --> B{Call placed}
+    B -->|Answered| C[Language selected]
+    B -->|No answer| D[Retry later]
+    C --> E[Reminder played]
+    E --> F{Confirmed attending?}
+    F -->|Yes| G[Visit logged as expected]
+    F -->|No / no response| H[Flagged for follow-up]
+    D --> B
+</div>
 
 ## Why this matters to me
 
@@ -34,6 +48,8 @@ Beyond day-to-day feature work, I'm actively picking up skills in a few directio
 - **AI-agent-assisted systems exploration** - using agentic tooling to understand app and binary behavior I didn't write, which has been a surprisingly good way to get better at reading unfamiliar codebases fast.
 - **Productized, white-label front-end templates** - building reusable Next.js/Tailwind sites backed by a headless CMS, so a new client site is a re-skin instead of a rebuild.
 - **Security-conscious offline-first mobile patterns** - local encryption, biometric/PIN-gated storage, and designing mobile apps that work fully without a network connection.
+- **System design** - working through how to decompose a system into services, where state should live, caching and queuing strategies, and designing for failure instead of just the happy path.
+- **Systems and information security** - secure-by-default configuration, threat modeling, and hardening the infrastructure and applications I ship rather than bolting security on after the fact.
 
 None of this is finished learning - it's what's currently on my plate, and some of it will probably turn into its own post once I have something concrete to say.
 
@@ -47,3 +63,11 @@ This blog is where I'll go deeper than my [portfolio](/) allows - the actual deb
 - Whatever else I'm learning that's worth writing down
 
 If you want the full history, check my [experience](/#experience) and [projects](/#projects), or just keep reading here.
+
+## Find me elsewhere
+
+- GitHub: [github.com/vinald](https://github.com/vinald)
+- LinkedIn: [linkedin.com/in/vinald12](https://linkedin.com/in/vinald12)
+- X: [@osamuelvinald](https://x.com/osamuelvinald)
+- Instagram: [@vxnald](https://instagram.com/vxnald)
+- Facebook: [facebook.com/vxnald](https://facebook.com/vxnald)
