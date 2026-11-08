@@ -3,6 +3,8 @@ description: Portfolio of Okiror Samuel Vinald - Full-stack Software Developer
 url: "https://vinald.github.io"
 baseurl: ""
 
+permalink: /blog/:title/
+
 # Exclude from build
 exclude:
   - Gemfile
