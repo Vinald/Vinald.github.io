@@ -63,3 +63,11 @@ This blog is where I'll go deeper than my [portfolio](/) allows - the actual deb
 - Whatever else I'm learning that's worth writing down
 
 If you want the full history, check my [experience](/#experience) and [projects](/#projects), or just keep reading here.
+
+## Find me elsewhere
+
+- GitHub: [github.com/vinald](https://github.com/vinald)
+- LinkedIn: [linkedin.com/in/vinald12](https://linkedin.com/in/vinald12)
+- X: [@osamuelvinald](https://x.com/osamuelvinald)
+- Instagram: [@vxnald](https://instagram.com/vxnald)
+- Facebook: [facebook.com/vxnald](https://facebook.com/vxnald)
