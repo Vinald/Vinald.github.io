@@ -41,6 +41,8 @@
         <link rel="stylesheet" href="/assets/css/styles.css" />
     </head>
     <body>
+        {% assign anchor_prefix = "" %}
+        {% unless page.url == "/" %}{% assign anchor_prefix = "/" %}{% endunless %}
         <nav class="navbar navbar-expand-md navbar-dark sticky-top">
             <div class="container">
                 <a class="navbar-brand fw-bold" href="/">
@@ -54,15 +56,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#intro">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Focus</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="{{ anchor_prefix }}#intro">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#services">Focus</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#education">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#certificates">Certificates</a></li>
                         <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ anchor_prefix }}#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -103,20 +105,20 @@
                     <div class="col-6 col-lg-2">
                         <h6>Site</h6>
                         <ul>
-                            <li><a href="#intro">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#experience">Experience</a></li>
-                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="{{ anchor_prefix }}#intro">About</a></li>
+                            <li><a href="{{ anchor_prefix }}#projects">Projects</a></li>
+                            <li><a href="{{ anchor_prefix }}#experience">Experience</a></li>
+                            <li><a href="{{ anchor_prefix }}#skills">Skills</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
                         <h6>More</h6>
                         <ul>
-                            <li><a href="#services">Focus</a></li>
-                            <li><a href="#education">Education</a></li>
-                            <li><a href="#certificates">Certificates</a></li>
+                            <li><a href="{{ anchor_prefix }}#services">Focus</a></li>
+                            <li><a href="{{ anchor_prefix }}#education">Education</a></li>
+                            <li><a href="{{ anchor_prefix }}#certificates">Certificates</a></li>
                             <li><a href="/blog/">Blog</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="{{ anchor_prefix }}#contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
