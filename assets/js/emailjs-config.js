@@ -4,7 +4,7 @@
  * Public key is safe to expose in frontend code.
  * Security is enforced through domain whitelisting in EmailJS dashboard.
  * 
- * Whitelisted domains: vinald.me, vinald.vercel.app
+ * Whitelisted domains: vinald.online, vinald.vercel.app
  */
 
 window.EMAILJS_PUBLIC_KEY  = "PUBLIC_KEY";
